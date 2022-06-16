@@ -1,1 +1,1 @@
-module models.foundation;
+module models.foundation.entities;
