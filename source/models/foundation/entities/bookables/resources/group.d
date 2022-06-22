@@ -4,8 +4,8 @@ module models.foundation.bookables.resources.group;
 import models.foundation;
 
 // Associates resources with resource groups that they are a member of.
-class DAPLBookableResourceGroup : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceGroup"));
+class DBookableResourceGroupEntity : DOOPEntity {
+  mixin(EntityThis!("BookableResourceGroupEntity"));
   
   override void initialize() {
     super.initialize;
@@ -35,16 +35,16 @@ class DAPLBookableResourceGroup : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcegroup with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceGroup with respect to the base currency."]),
       ])
-      .registerPath("foundation_accounts");
+      .registerPath("foundation_bookable.resource.groups");
   }
 }
-mixin(EntityCalls!("APLBookableResourceGroup"));
+mixin(EntityCalls!("BookableResourceGroupEntity"));
 
 version(uim_entities) {
   unittest {
-    assert(APLBookableResourceGroup);
+    assert(BookableResourceGroupEntity);
   
-  auto entity = APLBookableResourceGroup;
+  auto entity = BookableResourceGroupEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

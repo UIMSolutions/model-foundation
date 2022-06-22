@@ -3,15 +3,9 @@ module models.foundation.bookables.resources.characteristic;
 @safe:
 import models.foundation;
 
-static this() {
-  createEntities[DAPLBookableResourceCharacteristic.namespace] = (Json json) => APLBookableResourceCharacteristic(json); 
-  createEntities["aplBookableResourceCharacteristic"] = (Json json) => APLBookableResourceCharacteristic(json); 
-  createEntities["bookableResourceCharacteristic"] = (Json json) => APLBookableResourceCharacteristic(json); 
-}
-
 // Associates resources with their characteristics and specifies the proficiency level of a resource for that characteristic.
-class DAPLBookableResourceCharacteristic : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceCharacteristic"));
+class DBookableResourceCharacteristicEntity : DOOPEntity {
+  mixin(EntityThis!("BookableResourceCharacteristicEntity"));
   
   override void initialize() {
     super.initialize;
@@ -43,17 +37,17 @@ class DAPLBookableResourceCharacteristic : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcecharacteristic with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceCharacteristic with respect to the base currency."]),
       ])
-      .registerPath("foundation_bookableresourcecharacteristics");
+      .registerPath("foundation_bookable.resource.characteristics");
   }
 }
-mixin(EntityCalls!("APLBookableResourceCharacteristic"));
+mixin(EntityCalls!("BookableResourceCharacteristicEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLBookableResourceCharacteristic);
+    assert(BookableResourceCharacteristicEntity);
   
-  auto entity = APLBookableResourceCharacteristic;
+  auto entity = BookableResourceCharacteristicEntity;
   
 /*   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);

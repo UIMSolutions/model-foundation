@@ -4,8 +4,8 @@ module models.foundation.crm.campaign;
 import models.foundation;
 
 // Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life.
-class DAPLCampaign : DOOPEntity {
-  mixin(EntityThis!("APLCampaign"));
+class DCampaignEntity : DOOPEntity {
+  mixin(EntityThis!("CampaignEntity"));
   
   override void initialize() {
     super.initialize;
@@ -62,13 +62,13 @@ class DAPLCampaign : DOOPEntity {
       .registerPath("foundation_campaigns");
   }
 }
-mixin(EntityCalls!("APLCampaign"));
+mixin(EntityCalls!("CampaignEntity"));
 
 version(test_model_foundation) {
   unittest {
-    assert(APLCampaign);
+    assert(CampaignEntity);
 
-  auto entity = APLCampaign;
+  auto entity = CampaignEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

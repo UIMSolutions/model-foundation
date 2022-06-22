@@ -4,8 +4,8 @@ module models.foundation.bookables.resources.categories.association;
 import models.foundation;
 
 // Association entity to model the categorization of resources.
-class DAPLBookableResourceCategoryAssociation : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceCategoryAssociation"));
+class DBookableResourceCategoryAssociationEntity : DOOPEntity {
+  mixin(EntityThis!("BookableResourceCategoryAssociationEntity"));
   
   override void initialize() {
     super.initialize;
@@ -33,16 +33,16 @@ class DAPLBookableResourceCategoryAssociation : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcecategoryassn with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceCategoryAssn with respect to the base currency."]),
       ])
-      .registerPath("foundation_bookableresourcecategoryassociation");
+      .registerPath("foundation_bookable.resource.category.associations");
   }
 }
-mixin(EntityCalls!("APLBookableResourceCategoryAssociation"));
+mixin(EntityCalls!("BookableResourceCategoryAssociationEntity"));
 
 version(test_model_foundation) {
   unittest {
-    assert(APLBookableResourceCategoryAssociation);
+    assert(BookableResourceCategoryAssociationEntity);
   
-  auto entity = APLBookableResourceCategoryAssociation;
+  auto entity = BookableResourceCategoryAssociationEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

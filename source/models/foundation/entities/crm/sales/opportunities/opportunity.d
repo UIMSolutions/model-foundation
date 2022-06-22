@@ -4,8 +4,8 @@ module models.foundation.crm.sales.opportunities.opportunity;
 import models.foundation;
 
 // Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion.
-class DAPLOpportunity : DOOPEntity {
-  mixin(EntityThis!("APLOpportunity"));
+class DOpportunityEntity : DOOPEntity {
+  mixin(EntityThis!("OpportunityEntity"));
   
   override void initialize() {
     super.initialize;
@@ -134,14 +134,14 @@ class DAPLOpportunity : DOOPEntity {
       .registerPath("foundation_faxes");
   }
 }
-mixin(EntityCalls!("APLOpportunity"));
+mixin(EntityCalls!("OpportunityEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLOpportunity);
+    assert(OpportunityEntity);
   
-  auto entity = APLOpportunity;
+  auto entity = OpportunityEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -4,8 +4,8 @@ module models.foundation.crm.projects.lead;
 import models.foundation;
 
 // Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified.
-class DAPLLead : DOOPEntity {
- mixin(EntityThis!("APLLead"));
+class DLeadEntity : DOOPEntity {
+ mixin(EntityThis!("LeadEntity"));
   
   override void initialize() {
     super.initialize;
@@ -155,8 +155,8 @@ class DAPLLead : DOOPEntity {
       ]);      
   }
 
-  override string entityClass() { return "aplLead"; }
-  override string entityClasses() { return "aplLeads"; }
+  override string entityClass() { return "LeadEntity"; }
+  override string entityClasses() { return "LeadEntitys"; }
 
   this(UUID myId) { 
     this(); this.id(myId); }
@@ -172,15 +172,15 @@ class DAPLLead : DOOPEntity {
   // mixin(GetEntity!("contact", "contactId", "APLContact"));
 
 }
-auto APLLead() { return new DAPLLead; } 
-auto APLLead(Json json) { return new DAPLLead(json); } 
+auto LeadEntity() { return new DLeadEntity; } 
+auto LeadEntity(Json json) { return new DLeadEntity(json); } 
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLLead);
+    assert(LeadEntity);
   
-  auto entity = APLLead;
+  auto entity = LeadEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

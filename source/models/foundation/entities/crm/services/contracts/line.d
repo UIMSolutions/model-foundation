@@ -4,8 +4,8 @@ module models.foundation.crm.services.contracts.line;
 import models.foundation;
 
 // Line item in a contract that specifies the type of service a customer is entitled to.
-class DAPLContractLine : DOOPEntity {
-  mixin(EntityThis!("APLContractLine"));
+class DContractLineEntity : DOOPEntity {
+  mixin(EntityThis!("ContractLineEntity"));
   
   override void initialize() {
     super.initialize;
@@ -67,14 +67,14 @@ class DAPLContractLine : DOOPEntity {
       .registerPath("foundation_letters");
   }
 }
-mixin(EntityCalls!("DAPLContractLine"));
+mixin(EntityCalls!("DContractLineEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLContractLine);
+    assert(ContractLineEntity);
   
-  auto entity = APLContractLine;
+  auto entity = ContractLineEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

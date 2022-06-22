@@ -4,8 +4,8 @@ module models.foundation.crm.sales.orders.product;
 import models.foundation;
 
 // Line item in a sales order.
-class DAPLOrderProduct : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceCategoryAssociation"));
+class DOrderProductEntity : DOOPEntity {
+  mixin(EntityThis!("OrderProductEntity"));
   
   override void initialize() {
     super.initialize;
@@ -86,17 +86,17 @@ class DAPLOrderProduct : DOOPEntity {
         "salesOrderDetailName": StringAttribute, // Sales Order Detail Name. Added for 1:n Referential relationship"]),
         "parentBundleIdRef": StringAttribute, // Choose the parent bundle associated with this product"]),
       ])
-      .registerPath("foundation_orderproduct");
+      .registerPath("foundation_order.products");
   }
 }
-mixin(EntityCalls!("APLOrderProduct"));
+mixin(EntityCalls!("OrderProductEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLOrderProduct);
+    assert(OrderProductEntity);
 
-  auto entity = APLOrderProduct;
+  auto entity = OrderProductEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -21,7 +21,7 @@ class DCompetitorSalesLiteratureEntity : DOOPEntity {
       .registerPath("foundation_competitor.sales.literature");
   }
 }
-mixin(EntityCalls!("APLCompetitorSalesLiterature"));
+mixin(EntityCalls!("CompetitorSalesLiteratureEntity"));
 
 version(test_model_foundation) {
   unittest {

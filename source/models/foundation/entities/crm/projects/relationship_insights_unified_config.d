@@ -4,8 +4,8 @@ module models.foundation.crm.projects.relationship_insights_unified_config;
 import models.foundation;
 
 // 
-class DAPLRelationshipInsightsUnifiedConfig : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceCategoryAssociation"));
+class DRelationshipInsightsUnifiedConfigEntity : DOOPEntity {
+  mixin(EntityThis!("RelationshipInsightsUnifiedConfigEntity"));
   
   override void initialize() {
     super.initialize;
@@ -31,16 +31,16 @@ class DAPLRelationshipInsightsUnifiedConfig : DOOPEntity {
         "newName": StringAttribute, // The name of the custom entity."]),
         "useNewConfigExperience": StringAttribute, // 
       ])
-      .registerPath("foundation_relationshipinsightsunifiedconfig");
+      .registerPath("foundation_relationship.insights.unified.configs");
   }
 }
-mixin(EntityCalls!("APLRelationshipInsightsUnifiedConfig"));
+mixin(EntityCalls!("RelationshipInsightsUnifiedConfigEntity"));
 
 version(test_model_foundation) {
   unittest {
-    assert(APLRelationshipInsightsUnifiedConfig);
+    assert(RelationshipInsightsUnifiedConfigEntity);
   
-  auto entity = APLRelationshipInsightsUnifiedConfig;
+  auto entity = RelationshipInsightsUnifiedConfigEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

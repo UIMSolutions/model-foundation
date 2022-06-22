@@ -11,7 +11,7 @@ class DInvoiceFrequencyEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
+      .addValues([ // fix values
         StateCodeAttribute, // Status of the Invoice Frequency
         StatusCodeAttribute // Reason for the status of the Invoice Frequency
       ])

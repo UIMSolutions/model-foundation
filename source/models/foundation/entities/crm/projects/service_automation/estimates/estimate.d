@@ -4,8 +4,8 @@ module models.foundation.crm.projects.service_automation.estimates.estimate;
 import models.foundation;
 
 // Labor, cost, and revenue estimates for a project.
-class DAPLEstimate : DOOPEntity {
-  mixin(EntityThis!("APLEstimate"));
+class DEstimateEntity : DOOPEntity {
+  mixin(EntityThis!("EstimateEntity"));
   
   override void initialize() {
     super.initialize;
@@ -35,13 +35,13 @@ class DAPLEstimate : DOOPEntity {
       .registerPath("foundation_estimates");
   }
 }
-mixin(EntityCalls!("APLEstimate"));
+mixin(EntityCalls!("EstimateEntity"));
 
 version(test_model_foundation) {
   unittest {
-    assert(APLEstimate);
+    assert(EstimateEntity);
 
-  auto entity = APLEstimate;
+  auto entity = EstimateEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

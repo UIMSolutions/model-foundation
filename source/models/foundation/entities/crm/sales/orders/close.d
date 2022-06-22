@@ -4,8 +4,8 @@ module models.foundation.crm.sales.orders.close;
 import models.foundation;
 
 // Activity generated automatically when an order is closed.
-class DAPLOrderClose : DOOPEntity {
-  mixin(EntityThis!("APLOrderClose"));
+class DOrderCloseEntity : DOOPEntity {
+  mixin(EntityThis!("OrderCloseEntity"));
   
   override void initialize() {
     super.initialize;
@@ -92,14 +92,14 @@ class DAPLOrderClose : DOOPEntity {
       .registerPath("foundation_ordercloses");
   }
 }
-mixin(EntityCalls!("APLOrderClose"));
+mixin(EntityCalls!("OrderCloseEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLOrderClose);
+    assert(OrderCloseEntity);
   
-  auto entity = APLOrderClose;
+  auto entity = OrderCloseEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

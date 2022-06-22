@@ -4,8 +4,8 @@ module models.foundation.bookables.resources.bookings.booking;
 import models.foundation;
 
 // Represents the line details of a resource booking.
-class DAPLBookableResourceBooking : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceBooking"));
+class DBookableResourceBookingEntity : DOOPEntity {
+  mixin(EntityThis!("BookableResourceBookingEntity"));
   
   override void initialize() {
     super.initialize;
@@ -45,14 +45,14 @@ class DAPLBookableResourceBooking : DOOPEntity {
       .registerPath("foundation_bookableresourcebookings");
   }
 }
-mixin(EntityCalls!("APLBookableResourceBooking"));
+mixin(EntityCalls!("BookableResourceBookingEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLBookableResourceBooking);
+    assert(BookableResourceBookingEntity);
   
-  auto entity = APLBookableResourceBooking;
+    auto entity = BookableResourceBookingEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
