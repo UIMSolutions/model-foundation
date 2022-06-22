@@ -35,8 +35,8 @@ class DExpenseReceiptEntity : DOOPEntity {
 }
 mixin(EntityCalls!("ExpenseReceiptEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     assert(ExpenseReceiptEntity);
 
     auto entity = ExpenseReceiptEntity;

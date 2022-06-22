@@ -32,8 +32,8 @@ class DDiscountListEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DiscountListEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     assert(DiscountListEntity);
   
     auto entity = DiscountListEntity;

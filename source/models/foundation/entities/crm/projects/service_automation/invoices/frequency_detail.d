@@ -5,8 +5,13 @@ import models.foundation;
 
 // InvoiceFrequencyDetail of a user in the hierarchy
 class DAPLInvoiceFrequencyDetail : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
       "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
@@ -46,8 +51,8 @@ class DAPLInvoiceFrequencyDetail : DOOPEntity {
 auto APLInvoiceFrequencyDetail() { return new DAPLInvoiceFrequencyDetail; } 
 auto APLInvoiceFrequencyDetail(Json json) { return new DAPLInvoiceFrequencyDetail(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLInvoiceFrequencyDetail);
 

@@ -5,8 +5,13 @@ import models.foundation;
 
 // 
 class DAPLEntitlement : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
@@ -71,8 +76,8 @@ class DAPLEntitlement : DOOPEntity {
 auto APLEntitlement() { return new DAPLEntitlement; } 
 auto APLEntitlement(Json json) { return new DAPLEntitlement(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLEntitlement);
   

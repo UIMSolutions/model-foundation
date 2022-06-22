@@ -5,8 +5,13 @@ import models.foundation;
 
 // TeamMembership that is attached to one or more objects, including other notes.
  /*  class DAPLTeamMembership : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "systemUserId":OOPAttributeUUID"datatype":"UUID", "descriptions":{}}`,
       "teamId":OOPAttributeUUID"datatype":"UUID", "descriptions":{}}`,
     ]);
@@ -27,8 +32,8 @@ import models.foundation;
 auto APLTeamMembership() { return new DAPLTeamMembership; } 
 auto APLTeamMembership(Json json) { return new DAPLTeamMembership(json); }  */
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
   /* // auto entity = APLTeamMembership;
   // auto repository = OOPFileRepository("./tests");

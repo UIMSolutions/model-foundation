@@ -40,8 +40,8 @@ class DTransactionConnectionEntity : DOOPEntity {
 }
 mixin(EntityCalls!("TransactionConnectionEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(TransactionConnectionEntity);
 

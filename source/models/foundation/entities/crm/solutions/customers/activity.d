@@ -5,8 +5,13 @@ import models.foundation;
 
 // An activity performed by a user that has observational value to the business.
 class DAPLCustomerActivity : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
@@ -58,8 +63,8 @@ class DAPLCustomerActivity : DOOPEntity {
 auto APLCustomerActivity() { return new DAPLCustomerActivity; } 
 auto APLCustomerActivity(Json json) { return new DAPLCustomerActivity(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLCustomerActivity);
 

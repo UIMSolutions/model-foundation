@@ -36,8 +36,8 @@ class DFacilityEquipmentEntity : DOOPEntity {
 }
 mixin(EntityCalls!("FacilityEquipmentEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(FacilityEquipmentEntity);
 

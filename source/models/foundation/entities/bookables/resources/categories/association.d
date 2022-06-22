@@ -38,8 +38,8 @@ class DBookableResourceCategoryAssociationEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BookableResourceCategoryAssociationEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     assert(BookableResourceCategoryAssociationEntity);
   
   auto entity = BookableResourceCategoryAssociationEntity;

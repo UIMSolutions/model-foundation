@@ -6,8 +6,13 @@ import models.foundation;
 
 // The root entity for portal Ideas.
 class DAPLEntitlementProduct : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "entitlementProductId": UUIDAttribute, // Unique identifier of the contacts for the entitlements."]),
       "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
       "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
@@ -33,8 +38,8 @@ class DAPLEntitlementProduct : DOOPEntity {
 auto APLEntitlementProduct() { return new DAPLEntitlementProduct; } 
 auto APLEntitlementProduct(Json json) { return new DAPLEntitlementProduct(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLEntitlementProduct);
   

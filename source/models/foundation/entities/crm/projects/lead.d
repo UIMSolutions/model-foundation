@@ -175,8 +175,8 @@ class DLeadEntity : DOOPEntity {
 auto LeadEntity() { return new DLeadEntity; } 
 auto LeadEntity(Json json) { return new DLeadEntity(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(LeadEntity);
   

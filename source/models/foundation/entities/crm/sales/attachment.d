@@ -5,8 +5,13 @@ import models.foundation;
 
 // Item in the sales literature collection.
 class DAPLSalesAttachment : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "salesLiteratureItemId": UUIDAttribute, // Unique identifier for the document."]),
       "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the salesliteratureitem."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who last modified the salesliteratureitem."]),
@@ -50,8 +55,8 @@ class DAPLSalesAttachment : DOOPEntity {
 auto APLSalesAttachment() { return new DAPLSalesAttachment; } 
 auto APLSalesAttachment(Json json) { return new DAPLSalesAttachment(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLSalesAttachment);
   

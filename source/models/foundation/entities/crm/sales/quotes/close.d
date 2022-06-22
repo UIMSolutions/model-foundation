@@ -5,8 +5,13 @@ import models.foundation;
 
 // Activity generated when a quote is closed.
 class DAPLQuoteClose : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -105,8 +110,8 @@ class DAPLQuoteClose : DOOPEntity {
 auto APLQuoteClose() { return new DAPLQuoteClose; } 
 auto APLQuoteClose(Json json) { return new DAPLQuoteClose(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLQuoteClose);
   

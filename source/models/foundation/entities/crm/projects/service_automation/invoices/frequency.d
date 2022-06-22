@@ -5,7 +5,7 @@ import models.foundation;
 
 // InvoiceFrequency of a user in the hierarchy
 class DInvoiceFrequencyEntity : DOOPEntity {
-  mixin(EntityThis!("InvoiceFrequencyEntity"));
+  mixin(EntityThis!("xxx"));
   
   override void initialize() {
     super.initialize;
@@ -35,8 +35,8 @@ class DInvoiceFrequencyEntity : DOOPEntity {
 }
 mixin(EntityCalls!("InvoiceFrequencyEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(InvoiceFrequencyEntity);
 

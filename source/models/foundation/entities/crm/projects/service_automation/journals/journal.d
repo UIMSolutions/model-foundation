@@ -35,8 +35,8 @@ class DJournalEntity : DOOPEntity {
 }
 mixin(EntityCalls!("JournalEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(JournalEntity);
 

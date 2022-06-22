@@ -5,8 +5,13 @@ import models.foundation;
 
 // Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer.
 class DAPLQuote : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -123,8 +128,8 @@ class DAPLQuote : DOOPEntity {
 auto APLQuote() { return new DAPLQuote; } 
 auto APLQuote(Json json) { return new DAPLQuote(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLQuote);
 

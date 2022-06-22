@@ -39,8 +39,8 @@ class DAPLSalesLiterature : DOOPEntity {
 }
 mixin(EntityCalls!("APLSalesLiterature"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLSalesLiterature);
   

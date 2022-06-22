@@ -49,8 +49,8 @@ class DCompetitorAddressEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CompetitorAddressEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(CompetitorAddressEntity);
   

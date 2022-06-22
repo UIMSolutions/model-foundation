@@ -93,8 +93,8 @@ class DEstimateLineEntity : DOOPEntity {
 auto EstimateLineEntity() { return new DEstimateLineEntity; } 
 auto EstimateLineEntity(Json json) { return new DEstimateLineEntity(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(EstimateLineEntity);
 

@@ -64,8 +64,8 @@ class DCampaignEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CampaignEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     assert(CampaignEntity);
 
   auto entity = CampaignEntity;

@@ -5,8 +5,13 @@ import models.foundation;
 
 // Business competing for the sale represented by a lead or opportunity.
 class DAPLCompetitor : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
       "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
@@ -104,8 +109,8 @@ class DAPLCompetitor : DOOPEntity {
 auto APLCompetitor() { return new DAPLCompetitor; } 
 auto APLCompetitor(Json json) { return new DAPLCompetitor(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLCompetitor);
 

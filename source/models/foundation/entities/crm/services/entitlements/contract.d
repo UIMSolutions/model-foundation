@@ -4,42 +4,33 @@ module models.foundation.crm.services.entitlements.contract;
 import models.foundation;
 
 // 
-class DAPLEntitlementContact : DOOPEntity {
-  this() { super();
-    this.addValues([
-      "entitlementContactId": ContactIdAttribute, // Unique identifier of the contacts for the entitlements."]),
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "contactId": ContactIdAttribute, // 
-      "entitlementId": UUIDAttribute, // 
-    ]);
+class DEntitlementContactEntity : DOOPEntity {
+  mixin(EntityThis!("EntitlementContactEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
+        "entitlementContactId": ContactIdAttribute, // Unique identifier of the contacts for the entitlements."]),
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "contactId": ContactIdAttribute, // 
+        "entitlementId": UUIDAttribute, // 
+      ])
+      .registerPath("foundation_crm.services.entitlements.contracts");
   }
-
-  override string entityClass() { return "aplEntitlementContact"; }
-  override string entityClasses() { return "aplEntitlementContacts"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-  
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
 }
-auto APLEntitlementContact() { return new DAPLEntitlementContact; } 
-auto APLEntitlementContact(Json json) { return new DAPLEntitlementContact(json); } 
+mixin(EntityCalls!("EntitlementContactEntity")); 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
-    assert(APLEntitlementContact);
+    assert(EntitlementContactEntity);
   
-  auto entity = APLEntitlementContact;
+  auto entity = EntitlementContactEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

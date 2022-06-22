@@ -38,8 +38,8 @@ class DBookableResourceBookingHeaderEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BookableResourceBookingHeaderEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(BookableResourceBookingHeaderEntity);
   

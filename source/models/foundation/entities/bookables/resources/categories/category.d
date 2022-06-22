@@ -36,8 +36,8 @@ class DAPLBookableResourceCategory : DOOPEntity {
 }
 mixin(EntityCalls!("APLBookableResourceCategory"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLBookableResourceCategory);
   

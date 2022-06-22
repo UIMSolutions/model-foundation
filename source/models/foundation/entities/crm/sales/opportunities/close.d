@@ -95,8 +95,8 @@ class DAPLOpportunityClose : DOOPEntity {
 }
 mixin(EntityCalls!("APLOpportunityClose"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLOpportunityClose);
   
