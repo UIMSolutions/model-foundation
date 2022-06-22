@@ -4,38 +4,31 @@ module models.foundation.crm.sales.competitors.sales_literature;
 import models.foundation;
 
 // Association between a competitor and a product offered by the competitor.
-class DAPLCompetitorSalesLiterature : DOOPEntity {
-  this() { super();
-    this.addValues([
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "competitorId": UUIDAttribute, // "])
-    ]);
+class DCompetitorSalesLiteratureEntity : DOOPEntity {
+  mixin(EntityThis!("CompetitorSalesLiteratureEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "competitorId": UUIDAttribute, // "])
+      ])
+      .registerPath("foundation_competitor.sales.literature");
   }
-
-  override string entityClass() { return "aplCompetitorSalesLiterature"; }
-  override string entityClasses() { return "aplCompetitorSalesLiteratures"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLCompetitorSalesLiterature() { return new DAPLCompetitorSalesLiterature; } 
-auto APLCompetitorSalesLiterature(Json json) { return new DAPLCompetitorSalesLiterature(json); } 
+mixin(EntityCalls!("APLCompetitorSalesLiterature"));
 
 version(test_model_foundation) {
   unittest {
     
     assert(APLCompetitorSalesLiterature);
 
-  auto entity = APLCompetitorSalesLiterature;
+    auto entity = APLCompetitorSalesLiterature;
   // auto repository = OOPFileRepository("./tests");
 /*   repository.create("entities", entity.entityClasses, entity.toJson);
   
