@@ -3,49 +3,40 @@ module models.foundation.crm.projects.service_automation.transactions.categories
 import models.foundation;
 
 // Hierarchical relationship of the transaction category with a root node.
-class DAPLTransactionCategoryHierarchyElement : DOOPEntity {
-  this() { super();
-    this.addValues([
-      "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
-      "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
-      "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "childCategory": StringAttribute, // 
-      "parentCategory": StringAttribute, // 
-    ])
-    .addValues([
-      OwnerIdAttribute,
-      StateCodeAttribute, // Status of the Transaction Category Hierarchy Element
-      StatusCodeAttribute // Reason for the status of the Transaction Category Hierarchy Element
-    ]);      
+class DTransactionCategoryHierarchyElementEntity : DOOPEntity {
+  mixin(EntityThis!("TransactionCategoryHierarchyElementEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([ // fix values
+        OwnerIdAttribute,
+        StateCodeAttribute, // Status of the Transaction Category Hierarchy Element
+        StatusCodeAttribute // Reason for the status of the Transaction Category Hierarchy Element
+      ]);      
+      .addValues([
+        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
+        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
+        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "childCategory": StringAttribute, // 
+        "parentCategory": StringAttribute, // 
+      ])
+      .registerPath("foundation_transaction.category.hierarchy.elements");
   }
-
-  override string entityClass() { return "aplTransactionCategoryHierarchyElement"; }
-  override string entityClasses() { return "aplTransactionCategoryHierarchyElements"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "APLOrganization"));
 }
-auto APLTransactionCategoryHierarchyElement() { return new DAPLTransactionCategoryHierarchyElement; } 
-auto APLTransactionCategoryHierarchyElement(Json json) { return new DAPLTransactionCategoryHierarchyElement(json); } 
+mixin(EntityCalls!("JournalEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLTransactionCategoryHierarchyElement);
+    assert(TransactionCategoryHierarchyElementEntity);
 
-  auto entity = APLTransactionCategoryHierarchyElement;
+    auto entity = TransactionCategoryHierarchyElementEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

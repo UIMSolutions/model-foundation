@@ -4,15 +4,15 @@ module models.foundation.crm.projects.service_automation.transactions.connection
 import models.foundation;
 
 // TransactionConnection of a user in the hierarchy
-class DAPLTransactionConnection : DOOPEntity {
-  mixin(EntityThis!("APLBookableResourceCategoryAssociation"));
+class DTransactionConnectionEntity : DOOPEntity {
+  mixin(EntityThis!("TransactionConnectionEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // fix values
-        OwnerIdAttribute, // Owner Id"]),
+        OwnerIdAttribute, // Owner Id"
         StateCodeAttribute, // Time zone code that was in use when the record was created.
         StatusCodeAttribute // Reason for the status of the Transaction Connection
       ])
@@ -35,17 +35,17 @@ class DAPLTransactionConnection : DOOPEntity {
         "transaction2Role": StringAttribute, // 
         "transaction2Type": StringAttribute, // 
       ])
-      .registerPath("foundation_transactionconnections");
+      .registerPath("foundation_transaction.connections");
   }
 }
-mixin(EntityCalls!("APLTransactionConnection"));
+mixin(EntityCalls!("TransactionConnectionEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLTransactionConnection);
+    assert(TransactionConnectionEntity);
 
-  auto entity = APLTransactionConnection;
+  auto entity = TransactionConnectionEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
