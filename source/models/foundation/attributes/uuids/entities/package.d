@@ -1,1 +1,1 @@
-module models.foundation.attributes.uuids.entities;;
+module models.foundation.attributes.uuids.entities;
