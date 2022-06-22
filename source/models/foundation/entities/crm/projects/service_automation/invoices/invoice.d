@@ -4,8 +4,8 @@ module models.foundation.crm.projects.service_automation.invoices.invoice;
 import models.foundation;
 
 // Order that has been billed.
-class DAPLInvoice : DOOPEntity {
-  mixin(EntityThis!("APLInvoice"));
+class DInvoiceEntity : DOOPEntity {
+  mixin(EntityThis!("InvoiceEntity"));
   
   override void initialize() {
     super.initialize;
@@ -111,16 +111,16 @@ class DAPLInvoice : DOOPEntity {
       .registerPath("foundation_invoices");
   }
 }
-mixin(EntityCalls!("APLInvoice"));
+mixin(EntityCalls!("InvoiceEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLInvoice);
+    assert(InvoiceEntity);
 
-  auto entity = APLInvoice;
+  auto entity = InvoiceEntity;
   // auto repository = OOPFileRepository("./tests");
-/* /*  repository.create("entities", entity.entityClasses, entity.toJson);
+/*  repository.create("entities", entity.entityClasses, entity.toJson);
 
   auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
   assert(json != Json(null), entity.id.toString~" not found");

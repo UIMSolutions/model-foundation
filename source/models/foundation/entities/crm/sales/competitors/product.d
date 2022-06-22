@@ -4,7 +4,7 @@ module models.foundation.crm.sales.competitors.product;
 import models.foundation;
 
 // Association between a competitor and a product offered by the competitor.
-class DAPLCompetitorProduct : DOOPEntity {
+class DCompetitorProductEntity : DOOPEntity {
   mixin(EntityThis!("CompetitorProductEntity"));
   
   override void initialize() {
@@ -19,7 +19,7 @@ class DAPLCompetitorProduct : DOOPEntity {
         "competitorId": UUIDAttribute, // 
         "productId": UUIDAttribute, // 
       ])
-      .registerPath("foundation_competitorProductEntity");
+      .registerPath("foundation_competitor.products");
   }
 }
 mixin(EntityCalls!("CompetitorProductEntity"));
@@ -27,11 +27,11 @@ mixin(EntityCalls!("CompetitorProductEntity"));
 version(test_model_foundation) {
   unittest {
     
-    assert(APLCompetitorProduct);
+    assert(CompetitorProductEntity);
 
-  auto entity = APLCompetitorProduct;
+  auto entity = CompetitorProductEntity;
   // auto repository = OOPFileRepository("./tests");
-/* /*  repository.create("entities", entity.entityClasses, entity.toJson);
+/*  repository.create("entities", entity.entityClasses, entity.toJson);
 
   auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
   assert(json != Json(null), entity.id.toString~" not found");
