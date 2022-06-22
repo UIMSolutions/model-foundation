@@ -51,7 +51,7 @@ class DAPLTransactionCategoryPriceLevel : DOOPEntity {
 auto APLTransactionCategoryPriceLevel() { return new DAPLTransactionCategoryPriceLevel; } 
 auto APLTransactionCategoryPriceLevel(Json json) { return new DAPLTransactionCategoryPriceLevel(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLTransactionCategoryPriceLevel);

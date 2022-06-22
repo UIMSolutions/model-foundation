@@ -44,7 +44,7 @@ class DAPLTransactionCategoryClassification : DOOPEntity {
 auto APLTransactionCategoryClassification() { return new DAPLTransactionCategoryClassification; } 
 auto APLTransactionCategoryClassification(Json json) { return new DAPLTransactionCategoryClassification(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLTransactionCategoryClassification);

@@ -77,7 +77,7 @@ class DAPLProduct : DOOPEntity {
 auto APLProduct() { return new DAPLProduct; } 
 auto APLProduct(Json json) { return new DAPLProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLProduct);

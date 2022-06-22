@@ -31,12 +31,12 @@ class DAPLRelationshipInsightsUnifiedConfig : DOOPEntity {
         "newName": StringAttribute, // The name of the custom entity."]),
         "useNewConfigExperience": StringAttribute, // 
       ])
-      .registerPath("applications_relationshipinsightsunifiedconfig");
+      .registerPath("foundation_relationshipinsightsunifiedconfig");
   }
 }
 mixin(EntityCalls!("APLRelationshipInsightsUnifiedConfig"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     assert(APLRelationshipInsightsUnifiedConfig);
   

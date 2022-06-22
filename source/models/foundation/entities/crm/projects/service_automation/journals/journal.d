@@ -46,7 +46,7 @@ class DAPLJournal : DOOPEntity {
 auto APLJournal() { return new DAPLJournal; } 
 auto APLJournal(Json json) { return new DAPLJournal(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLJournal);

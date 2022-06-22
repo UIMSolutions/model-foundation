@@ -98,7 +98,7 @@ class DAPLInvoiceLineTransaction : DOOPEntity {
 auto APLInvoiceLineTransaction() { return new DAPLInvoiceLineTransaction; } 
 auto APLInvoiceLineTransaction(Json json) { return new DAPLInvoiceLineTransaction(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLInvoiceLineTransaction);

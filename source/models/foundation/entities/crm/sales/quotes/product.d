@@ -90,7 +90,7 @@ class DAPLQuoteProduct : DOOPEntity {
 auto APLQuoteProduct() { return new DAPLQuoteProduct; } 
 auto APLQuoteProduct(Json json) { return new DAPLQuoteProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLQuoteProduct);

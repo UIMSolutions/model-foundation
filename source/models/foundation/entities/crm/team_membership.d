@@ -27,7 +27,7 @@ import models.foundation;
 auto APLTeamMembership() { return new DAPLTeamMembership; } 
 auto APLTeamMembership(Json json) { return new DAPLTeamMembership(json); }  */
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
   /* // auto entity = APLTeamMembership;

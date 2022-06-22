@@ -109,7 +109,7 @@ class DAPLInvoiceProduct : DOOPEntity {
 auto APLInvoiceProduct() { return new DAPLInvoiceProduct; } 
 auto APLInvoiceProduct(Json json) { return new DAPLInvoiceProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLInvoiceProduct);

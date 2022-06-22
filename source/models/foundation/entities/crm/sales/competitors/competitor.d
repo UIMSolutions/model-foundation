@@ -104,7 +104,7 @@ class DAPLCompetitor : DOOPEntity {
 auto APLCompetitor() { return new DAPLCompetitor; } 
 auto APLCompetitor(Json json) { return new DAPLCompetitor(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCompetitor);

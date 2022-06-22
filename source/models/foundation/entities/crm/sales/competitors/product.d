@@ -31,7 +31,7 @@ class DAPLCompetitorProduct : DOOPEntity {
 auto APLCompetitorProduct() { return new DAPLCompetitorProduct; } 
 auto APLCompetitorProduct(Json json) { return new DAPLCompetitorProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCompetitorProduct);

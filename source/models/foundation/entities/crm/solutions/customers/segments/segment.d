@@ -49,7 +49,7 @@ class DAPLSegment : DOOPEntity {
 auto APLSegment() { return new DAPLSegment; } 
 auto APLSegment(Json json) { return new DAPLSegment(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLSegment);

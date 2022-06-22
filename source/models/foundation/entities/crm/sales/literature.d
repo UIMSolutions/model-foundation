@@ -49,7 +49,7 @@ class DAPLSalesLiterature : DOOPEntity {
 auto APLSalesLiterature() { return new DAPLSalesLiterature; } 
 auto APLSalesLiterature(Json json) { return new DAPLSalesLiterature(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLSalesLiterature);

@@ -47,7 +47,7 @@ class DAPLSegmentMembership : DOOPEntity {
 auto APLSegmentMembership() { return new DAPLSegmentMembership; } 
 auto APLSegmentMembership(Json json) { return new DAPLSegmentMembership(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLSegmentMembership);

@@ -48,7 +48,7 @@ class DAPLProductAssociation : DOOPEntity {
 auto APLProductAssociation() { return new DAPLProductAssociation; } 
 auto APLProductAssociation(Json json) { return new DAPLProductAssociation(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLProductAssociation);

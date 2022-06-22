@@ -46,7 +46,7 @@ class DAPLDiscount : DOOPEntity {
 auto APLDiscount() { return new DAPLDiscount; } 
 auto APLDiscount(Json json) { return new DAPLDiscount(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLDiscount);

@@ -105,7 +105,7 @@ class DAPLQuoteClose : DOOPEntity {
 auto APLQuoteClose() { return new DAPLQuoteClose; } 
 auto APLQuoteClose(Json json) { return new DAPLQuoteClose(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLQuoteClose);

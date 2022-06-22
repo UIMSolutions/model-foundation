@@ -44,7 +44,7 @@ class DAPLFacilityEquipment : DOOPEntity {
 auto APLFacilityEquipment() { return new DAPLFacilityEquipment; } 
 auto APLFacilityEquipment(Json json) { return new DAPLFacilityEquipment(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLFacilityEquipment);

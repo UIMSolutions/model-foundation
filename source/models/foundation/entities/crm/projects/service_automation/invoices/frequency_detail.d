@@ -46,7 +46,7 @@ class DAPLInvoiceFrequencyDetail : DOOPEntity {
 auto APLInvoiceFrequencyDetail() { return new DAPLInvoiceFrequencyDetail; } 
 auto APLInvoiceFrequencyDetail(Json json) { return new DAPLInvoiceFrequencyDetail(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLInvoiceFrequencyDetail);

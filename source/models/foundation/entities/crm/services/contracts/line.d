@@ -64,12 +64,12 @@ class DAPLContractLine : DOOPEntity {
         "uoMId": UUIDAttribute, // Choose the unit of measurement for the base unit quantity for this purchase, such as each or dozen.
         "uoMScheduleId": UUIDAttribute, // Unique identifier of the unit group associated with the contract line.
       ])
-      .registerPath("applications_letters");
+      .registerPath("foundation_letters");
   }
 }
 mixin(EntityCalls!("DAPLContractLine"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLContractLine);

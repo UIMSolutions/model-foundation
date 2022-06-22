@@ -131,12 +131,12 @@ class DAPLOpportunity : DOOPEntity {
         "identifyPursuitTeam": StringAttribute, // Choose whether you have recorded who will pursue the opportunity.
         "presentFinalProposal": StringAttribute, // Select whether the final proposal has been presented to the account.
       ])
-      .registerPath("applications_faxes");
+      .registerPath("foundation_faxes");
   }
 }
 mixin(EntityCalls!("APLOpportunity"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOpportunity);

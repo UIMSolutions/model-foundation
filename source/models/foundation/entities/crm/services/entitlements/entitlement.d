@@ -71,7 +71,7 @@ class DAPLEntitlement : DOOPEntity {
 auto APLEntitlement() { return new DAPLEntitlement; } 
 auto APLEntitlement(Json json) { return new DAPLEntitlement(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLEntitlement);

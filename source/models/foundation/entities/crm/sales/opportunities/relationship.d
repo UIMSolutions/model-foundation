@@ -43,7 +43,7 @@ class DAPLOpportunityRelationship : DOOPEntity {
 auto APLOpportunityRelationship() { return new DAPLOpportunityRelationship; } 
 auto APLOpportunityRelationship(Json json) { return new DAPLOpportunityRelationship(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOpportunityRelationship);

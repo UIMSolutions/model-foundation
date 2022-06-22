@@ -40,7 +40,7 @@ class DAPLTransactionCategoryHierarchyElement : DOOPEntity {
 auto APLTransactionCategoryHierarchyElement() { return new DAPLTransactionCategoryHierarchyElement; } 
 auto APLTransactionCategoryHierarchyElement(Json json) { return new DAPLTransactionCategoryHierarchyElement(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLTransactionCategoryHierarchyElement);

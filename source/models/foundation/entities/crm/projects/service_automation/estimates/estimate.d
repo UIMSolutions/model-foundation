@@ -32,12 +32,12 @@ class DAPLEstimate : DOOPEntity {
         "estimateHeaderType_display": StringAttribute, // 
         "project": StringAttribute, // Select the name of the project."]),
       ])
-      .registerPath("applications_estimates");
+      .registerPath("foundation_estimates");
   }
 }
 mixin(EntityCalls!("APLEstimate"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     assert(APLEstimate);
 

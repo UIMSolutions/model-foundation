@@ -56,7 +56,7 @@ class DAPLCompetitorAddress : DOOPEntity {
 auto APLCompetitorAddress() { return new DAPLCompetitorAddress; } 
 auto APLCompetitorAddress(Json json) { return new DAPLCompetitorAddress(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCompetitorAddress);

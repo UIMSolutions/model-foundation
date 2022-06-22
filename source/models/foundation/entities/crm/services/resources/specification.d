@@ -43,7 +43,7 @@ class DAPLResourceSpecification : DOOPEntity {
 auto APLResourceSpecification() { return new DAPLResourceSpecification; } 
 auto APLResourceSpecification(Json json) { return new DAPLResourceSpecification(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLResourceSpecification);

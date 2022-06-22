@@ -40,7 +40,7 @@ class DAPLResource : DOOPEntity {
 auto APLResource() { return new DAPLResource; } 
 auto APLResource(Json json) { return new DAPLResource(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLResource);

@@ -43,7 +43,7 @@ class DAPLSiconfig : DOOPEntity {
 auto APLSiconfig() { return new DAPLSiconfig; } 
 auto APLSiconfig(Json json) { return new DAPLSiconfig(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLSiconfig);

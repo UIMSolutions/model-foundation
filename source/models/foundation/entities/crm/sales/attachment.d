@@ -50,7 +50,7 @@ class DAPLSalesAttachment : DOOPEntity {
 auto APLSalesAttachment() { return new DAPLSalesAttachment; } 
 auto APLSalesAttachment(Json json) { return new DAPLSalesAttachment(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLSalesAttachment);

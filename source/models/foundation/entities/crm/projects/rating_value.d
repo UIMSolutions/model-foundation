@@ -39,7 +39,7 @@ class DAPLRatingValue : DOOPEntity {
 }
 mixin(EntityCalls!("APLRatingValue"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     assert(APLRatingValue);
   

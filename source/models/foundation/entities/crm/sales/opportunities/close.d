@@ -106,7 +106,7 @@ class DAPLOpportunityClose : DOOPEntity {
 auto APLOpportunityClose() { return new DAPLOpportunityClose; } 
 auto APLOpportunityClose(Json json) { return new DAPLOpportunityClose(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOpportunityClose);

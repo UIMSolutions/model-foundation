@@ -47,7 +47,7 @@ class DAPLProductRelationship : DOOPEntity {
 auto APLProductRelationship() { return new DAPLProductRelationship; } 
 auto APLProductRelationship(Json json) { return new DAPLProductRelationship(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLProductRelationship);

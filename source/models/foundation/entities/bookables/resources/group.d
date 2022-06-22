@@ -35,7 +35,7 @@ class DAPLBookableResourceGroup : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcegroup with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceGroup with respect to the base currency."]),
       ])
-      .registerPath("applications_accounts");
+      .registerPath("foundation_accounts");
   }
 }
 mixin(EntityCalls!("APLBookableResourceGroup"));

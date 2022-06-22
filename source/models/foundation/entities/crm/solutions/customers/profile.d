@@ -147,7 +147,7 @@ class DAPLCustomerProfile : DOOPEntity {
 auto APLCustomerProfile() { return new DAPLCustomerProfile; } 
 auto APLCustomerProfile(Json json) { return new DAPLCustomerProfile(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCustomerProfile);

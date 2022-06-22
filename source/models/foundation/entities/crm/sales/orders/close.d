@@ -89,12 +89,12 @@ class DAPLOrderClose : DOOPEntity {
         "community_display": StringAttribute, // 
         "leftVoiceMail": StringAttribute, // Left the voice mail"]),
       ])
-      .registerPath("applications_ordercloses");
+      .registerPath("foundation_ordercloses");
   }
 }
 mixin(EntityCalls!("APLOrderClose"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOrderClose);

@@ -130,7 +130,7 @@ class DAPLOrder : DOOPEntity {
 auto APLOrder() { return new DAPLOrder; } 
 auto APLOrder(Json json) { return new DAPLOrder(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOrder);

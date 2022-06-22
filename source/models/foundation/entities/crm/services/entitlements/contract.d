@@ -34,7 +34,7 @@ class DAPLEntitlementContact : DOOPEntity {
 auto APLEntitlementContact() { return new DAPLEntitlementContact; } 
 auto APLEntitlementContact(Json json) { return new DAPLEntitlementContact(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLEntitlementContact);

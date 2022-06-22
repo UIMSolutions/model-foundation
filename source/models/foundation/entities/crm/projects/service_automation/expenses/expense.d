@@ -4,8 +4,8 @@ module models.foundation.crm.projects.service_automation.expenses.expense;
 import models.foundation;
 
 // Expense of a user in the hierarchy
-class DAPLExpense : DOOPEntity {
-  mixin(EntityThis!("APLExpense"));
+class DExpenseEntity : DOOPEntity {
+  mixin(EntityThis!("ExpenseEntity"));
   
   override void initialize() {
     super.initialize;
@@ -57,16 +57,16 @@ class DAPLExpense : DOOPEntity {
         "totalAmount": StringAttribute, // Shows the total amount of the expense entry."]),
         "totalAmountBase": StringAttribute, // Enter the value of the total amount in the base currency."]),
       ])
-      .registerPath("applications_expenses");
+      .registerPath("foundation_expenses");
   }
 }
-mixin(EntityCalls!("APLExpense"));
+mixin(EntityCalls!("ExpenseEntity"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
-    assert(APLExpense);
+    assert(ExpenseEntity);
 
-  auto entity = APLExpense;
+    auto entity = ExpenseEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

@@ -84,7 +84,7 @@ class DAPLContract : DOOPEntity {
 auto APLContract() { return new DAPLContract; } 
 auto APLContract(Json json) { return new DAPLContract(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLContract);

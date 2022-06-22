@@ -35,7 +35,7 @@ class DAPLResourceExpansion : DOOPEntity {
 auto APLResourceExpansion() { return new DAPLResourceExpansion; } 
 auto APLResourceExpansion(Json json) { return new DAPLResourceExpansion(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLResourceExpansion);

@@ -36,7 +36,7 @@ class DCompanyEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CompanyEntity"));
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(CompanyEntity);

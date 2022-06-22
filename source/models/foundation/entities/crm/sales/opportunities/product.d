@@ -74,7 +74,7 @@ class DAPLOpportunityProduct : DOOPEntity {
 auto APLOpportunityProduct() { return new DAPLOpportunityProduct; } 
 auto APLOpportunityProduct(Json json) { return new DAPLOpportunityProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOpportunityProduct);

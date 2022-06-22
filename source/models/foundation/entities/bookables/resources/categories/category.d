@@ -43,7 +43,7 @@ class DAPLBookableResourceCategory : DOOPEntity {
 auto APLBookableResourceCategory() { return new DAPLBookableResourceCategory; } 
 auto APLBookableResourceCategory(Json json) { return new DAPLBookableResourceCategory(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLBookableResourceCategory);

@@ -62,7 +62,7 @@ class DAPLBookableResource : DOOPEntity {
 auto APLBookableResource() { return new DAPLBookableResource; } 
 auto APLBookableResource(Json json) { return new DAPLBookableResource(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLBookableResource);

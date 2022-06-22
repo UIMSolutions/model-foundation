@@ -58,7 +58,7 @@ class DAPLCustomerActivity : DOOPEntity {
 auto APLCustomerActivity() { return new DAPLCustomerActivity; } 
 auto APLCustomerActivity(Json json) { return new DAPLCustomerActivity(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCustomerActivity);

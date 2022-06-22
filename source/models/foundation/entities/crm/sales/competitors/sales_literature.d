@@ -30,7 +30,7 @@ class DAPLCompetitorSalesLiterature : DOOPEntity {
 auto APLCompetitorSalesLiterature() { return new DAPLCompetitorSalesLiterature; } 
 auto APLCompetitorSalesLiterature(Json json) { return new DAPLCompetitorSalesLiterature(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLCompetitorSalesLiterature);

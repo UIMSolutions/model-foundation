@@ -33,7 +33,7 @@ class DAPLEntitlementProduct : DOOPEntity {
 auto APLEntitlementProduct() { return new DAPLEntitlementProduct; } 
 auto APLEntitlementProduct(Json json) { return new DAPLEntitlementProduct(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLEntitlementProduct);

@@ -32,7 +32,7 @@ class DAPLOpportunityCompetitors : DOOPEntity {
 auto APLOpportunityCompetitors() { return new DAPLOpportunityCompetitors; } 
 auto APLOpportunityCompetitors(Json json) { return new DAPLOpportunityCompetitors(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLOpportunityCompetitors);

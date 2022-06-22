@@ -175,7 +175,7 @@ class DAPLLead : DOOPEntity {
 auto APLLead() { return new DAPLLead; } 
 auto APLLead(Json json) { return new DAPLLead(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLLead);

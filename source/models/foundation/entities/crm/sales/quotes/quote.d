@@ -123,7 +123,7 @@ class DAPLQuote : DOOPEntity {
 auto APLQuote() { return new DAPLQuote; } 
 auto APLQuote(Json json) { return new DAPLQuote(json); } 
 
-version(test_library) {
+version(test_model_foundation) {
   unittest {
     
     assert(APLQuote);
