@@ -4,8 +4,8 @@ module models.foundation.crm.sales.quotes.quote;
 import models.foundation;
 
 // Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer.
-class DAPLQuote : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DQuoteEntity : DOOPEntity {
+  mixin(EntityThis!("QuoteEntity"));
   
   override void initialize() {
     super.initialize;
@@ -106,34 +106,18 @@ class DAPLQuote : DOOPEntity {
       "accountId": AccountIdAttribute, // Unique identifier of the account with which the quote is associated."]),
       "contactId": ContactIdAttribute, // Unique identifier of the contact associated with the quote."]),
       "campaignId": UUIDAttribute, // Shows the campaign that the order was created from."]),
-    ]);
+      ])
+      .registerPath("foundation_crm.sales.quotes");
   }
-
-  override string entityClass() { return "aplQuote"; }
-  override string entityClasses() { return "aplQuotes"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("account", "accountId", "APLAccount"));
-  // mixin(GetEntity!("campaign", "campaignId", "APLCampaign"));
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
 }
-auto APLQuote() { return new DAPLQuote; } 
-auto APLQuote(Json json) { return new DAPLQuote(json); } 
+mixin(EntityCalls!("QuoteEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLQuote);
+    assert(QuoteEntity);
 
-  auto entity = APLQuote; 
+  auto entity = QuoteEntity; 
     
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);

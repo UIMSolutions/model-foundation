@@ -4,8 +4,8 @@ module models.foundation.crm.solutions.customers.activity;
 import models.foundation;
 
 // An activity performed by a user that has observational value to the business.
-class DAPLCustomerActivity : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DCustomerActivityEntity : DOOPEntity {
+  mixin(EntityThis!("CustomerActivityEntity"));
   
   override void initialize() {
     super.initialize;
@@ -43,32 +43,18 @@ class DAPLCustomerActivity : DOOPEntity {
       "stateCode_display": StringAttribute, // 
       "statusCode": StatusCodeAttribute, //Reason for the status of the CustomerActivity"]),
       "statusCode_display": StringAttribute, // 
-    ]);
+      ])
+      .registerPath("foundation_crm.solutions.customers.activity");
   }
-
-  override string entityClass() { return "aplCustomerActivity"; }
-  override string entityClasses() { return "aplCustomerActivities"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-   // mixin(GetEntity!("campaign", "campaignId", "APLCustomerActivity"));
 }
-auto APLCustomerActivity() { return new DAPLCustomerActivity; } 
-auto APLCustomerActivity(Json json) { return new DAPLCustomerActivity(json); } 
+mixin(EntityCalls!("CustomerActivityEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLCustomerActivity);
+    assert(CustomerActivityEntity);
 
-  auto entity = APLCustomerActivity;
+  auto entity = CustomerActivityEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

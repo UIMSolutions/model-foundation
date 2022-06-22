@@ -4,13 +4,17 @@ module models.foundation.crm.services.entitlements.entitlement;
 import models.foundation;
 
 // 
-class DAPLEntitlement : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DEntitlementEntity : DOOPEntity {
+  mixin(EntityThis!("EntitlementEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
+      .addValues([
+        StateCodeAttribute, // For internal use only.
+        StatusCodeAttribute // Select the reason code that explains the status of the entitlement.
+      ])
       .addValues([
       "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
@@ -44,44 +48,22 @@ class DAPLEntitlement : DOOPEntity {
       "contactId": ContactIdAttribute, // Unique identifier for Contact associated with Entitlement."]),
       "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the contact with respect to the base currency."]),
       "transactionCurrencyId": CurrencyIdAttribute, // Unique identifier of the currency associated with the contact."]),
-    ])
-    .addValues([
-      StateCodeAttribute, // For internal use only.
-      StatusCodeAttribute // Select the reason code that explains the status of the entitlement.
-    ])
-    .addValues([
       "kbAccessLevel": StringAttribute, //Select the access someone will have to the knowledge base on the portal."]),
       "kbAccessLevel_display": StringAttribute, //"]),
       "remainingTerms": StringAttribute, //Type the total number of entitlement terms that are left."]),
       "restrictCaseCreation": StringAttribute, //Tells whether case creation is restricted based on entitlement terms."]),
-    ]);     
+      ])
+      .registerPath("foundation_crm.services.entitlements");
   }
-
-  override string entityClass() { return "aplEntitlement"; }
-  override string entityClasses() { return "aplEntitlements"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("account", "accountId", "APLAccount"));
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
-
 }
-auto APLEntitlement() { return new DAPLEntitlement; } 
-auto APLEntitlement(Json json) { return new DAPLEntitlement(json); } 
+mixin(EntityCalls!("EntitlementEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLEntitlement);
+    assert(EntitlementEntity);
   
-  auto entity = APLEntitlement;
+  auto entity = EntitlementEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

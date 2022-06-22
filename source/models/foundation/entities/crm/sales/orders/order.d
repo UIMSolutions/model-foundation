@@ -4,8 +4,8 @@ module models.foundation.crm.sales.orders.order;
 import models.foundation;
 
 // Quote that has been accepted.
-class DAPLOrder : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DOrderEntity : DOOPEntity {
+  mixin(EntityThis!("OrderEntity"));
   
   override void initialize() {
     super.initialize;
@@ -111,34 +111,18 @@ class DAPLOrder : DOOPEntity {
         "shipToPostalCode": StringAttribute, //Type the ZIP Code or postal code for the shipping address."]),
         "shipToStateOrProvince": StringAttribute, //Type the state or province for the shipping address."]),
         "shipToTelephone": StringAttribute, //Type the phone number for the customer's shipping address."]),
-      ]);      
+      ])
+      .registerPath("foundation_crm.sales.orders");
   }
-
-  override string entityClass() { return "aplOrder"; }
-  override string entityClasses() { return "aplOrders"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("account", "accountId", "APLAccount"));
-  // mixin(GetEntity!("campaign", "campaignId", "APLCampaign"));
-  // mixin(GetEntity!("contact", "contactId", "APLContact"));
 }
-auto APLOrder() { return new DAPLOrder; } 
-auto APLOrder(Json json) { return new DAPLOrder(json); } 
+mixin(EntityCalls!("OrderEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLOrder);
+    assert(OrderEntity);
 
-  auto entity = APLOrder;
+  auto entity = OrderEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

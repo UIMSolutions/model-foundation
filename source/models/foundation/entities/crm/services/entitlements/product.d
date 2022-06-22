@@ -5,51 +5,39 @@ module models.foundation.crm.services.entitlements.product;
 import models.foundation;
 
 // The root entity for portal Ideas.
-class DAPLEntitlementProduct : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DEntitlementProductEntity : DOOPEntity {
+  mixin(EntityThis!("EntitlementProductEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
-      "entitlementProductId": UUIDAttribute, // Unique identifier of the contacts for the entitlements."]),
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "productId": UUIDAttribute, // 
-      "entitlementId": UUIDAttribute, // 
-    ]);
+        "entitlementProductId": UUIDAttribute, // Unique identifier of the contacts for the entitlements."]),
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "productId": UUIDAttribute, // 
+        "entitlementId": UUIDAttribute, // 
+      ])
+      .registerPath("foundation_crm.services.entitlements.products");
   }
-
-  override string entityClass() { return "aplEntitlementProduct"; }
-  override string entityClasses() { return "aplEntitlementProducts"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLEntitlementProduct() { return new DAPLEntitlementProduct; } 
-auto APLEntitlementProduct(Json json) { return new DAPLEntitlementProduct(json); } 
+mixin(EntityCalls!("EntitlementProductEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLEntitlementProduct);
+    assert(EntitlementProductEntity);
   
-  auto entity = APLEntitlementProduct;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
+    auto entity = EntitlementProductEntity;
+    // auto repository = OOPFileRepository("./tests");
+    /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
+      auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
+      assert(json != Json(null), entity.id.toString~" not found");
 
-  repository.cleanupConnections; */ 
+      repository.cleanupConnections; */ 
   }
 }
