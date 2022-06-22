@@ -4,8 +4,8 @@ module models.foundation.crm.sales.competitors.competitor;
 import models.foundation;
 
 // Business competing for the sale represented by a lead or opportunity.
-class DAPLCompetitor : DOOPEntity {
-  mixin(EntityThis!("xxx"));
+class DCompetitorEntity : DOOPEntity {
+  mixin(EntityThis!("CompetitorEntity"));
   
   override void initialize() {
     super.initialize;
@@ -89,32 +89,18 @@ class DAPLCompetitor : DOOPEntity {
       "winPercentage": PercentageAttribute, // Type the percentage of your organization's lost opportunities that are won by the competitor to identify your strongest competitors."]),
       "entityImageId": UUIDAttribute, // 
       "yomiName": StringAttribute, // Type the phonetic spelling of the competitor's name, if specified in Japanese, to make sure the name is pronounced correctly in phone calls and other communications."]),
-    ]);
+      ])
+      .registerPath("foundation_crm.sales.competitors");
   }
-
-  override string entityClass() { return "aplCompetitor"; }
-  override string entityClasses() { return "aplCompetitors"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-  // mixin(GetEntity!("organization", "organizationId", "APLOrganization"));
 }
-auto APLCompetitor() { return new DAPLCompetitor; } 
-auto APLCompetitor(Json json) { return new DAPLCompetitor(json); } 
+mixin(EntityCalls!("CompetitorEntity"));
 
 unittest {
   version(test_model_foundation) {
     
-    assert(APLCompetitor);
+    assert(CompetitorEntity);
 
-  auto entity = APLCompetitor;
+  auto entity = CompetitorEntity;
   
   // auto repository = OOPFileRepository("./tests");
 /*   repository.create("entities", entity.entityClasses, entity.toJson);
