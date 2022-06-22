@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.transactions.categories.classification;
+module models.foundation.crm.projects.service_automation.transactions.categories.classification;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Entity used to associate a category broadly as time, expense or material.
 class DAPLTransactionCategoryClassification : DOOPEntity {

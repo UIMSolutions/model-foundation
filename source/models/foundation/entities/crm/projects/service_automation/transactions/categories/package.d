@@ -1,10 +1,10 @@
-module models.applications.foundations.crm.projects.service_automation.transactions.categories;
+module models.foundation.crm.projects.service_automation.transactions.categories;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.projects.service_automation.transactions.categories.category;
+public import models.foundation.crm.projects.service_automation.transactions.categories.category;
 
-public import models.applications.foundations.crm.projects.service_automation.transactions.categories.classification;
-public import models.applications.foundations.crm.projects.service_automation.transactions.categories.hierarchy_element;
-public import models.applications.foundations.crm.projects.service_automation.transactions.categories.price_level;
+public import models.foundation.crm.projects.service_automation.transactions.categories.classification;
+public import models.foundation.crm.projects.service_automation.transactions.categories.hierarchy_element;
+public import models.foundation.crm.projects.service_automation.transactions.categories.price_level;

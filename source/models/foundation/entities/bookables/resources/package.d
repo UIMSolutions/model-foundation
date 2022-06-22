@@ -1,11 +1,11 @@
-module models.applications.foundations.bookables.resources;
+module models.foundation.bookables.resources;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.bookables.resources.bookings;
-public import models.applications.foundations.bookables.resources.categories;
+public import models.foundation.bookables.resources.bookings;
+public import models.foundation.bookables.resources.categories;
 
-public import models.applications.foundations.bookables.resources.characteristic;
-public import models.applications.foundations.bookables.resources.group;
-public import models.applications.foundations.bookables.resources.resource;
+public import models.foundation.bookables.resources.characteristic;
+public import models.foundation.bookables.resources.group;
+public import models.foundation.bookables.resources.resource;

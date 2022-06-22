@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.opportunities.competitors;
+module models.foundation.crm.sales.opportunities.competitors;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Association between a competitor and a product offered by the competitor.
 class DAPLOpportunityCompetitors : DOOPEntity {

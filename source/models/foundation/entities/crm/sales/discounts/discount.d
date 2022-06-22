@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.discounts.discount;
+module models.foundation.crm.sales.discounts.discount;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Price reduction made from the list price of a product or service based on the quantity purchased.
 class DAPLDiscount : DOOPEntity {

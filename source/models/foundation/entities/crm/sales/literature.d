@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.literature;
+module models.foundation.crm.sales.literature;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Storage of sales literature, which may contain one or more documents.
 class DAPLSalesLiterature : DOOPEntity {

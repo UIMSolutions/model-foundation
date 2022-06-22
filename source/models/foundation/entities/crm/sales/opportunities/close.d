@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.opportunities.close;
+module models.foundation.crm.sales.opportunities.close;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue.
 class DAPLOpportunityClose : DOOPEntity {

@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.expenses.category;
+module models.foundation.crm.projects.service_automation.expenses.category;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Main container that holds expense category information.
 class DAPLExpenseCategory : DOOPEntity {

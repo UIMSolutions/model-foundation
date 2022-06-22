@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.sales.discounts;
+module models.foundation.crm.sales.discounts;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.sales.discounts.discount;
+public import models.foundation.crm.sales.discounts.discount;
 
-public import models.applications.foundations.crm.sales.discounts.list;
+public import models.foundation.crm.sales.discounts.list;

@@ -1,9 +1,9 @@
-module models.applications.foundations.crm.services.resources;
+module models.foundation.crm.services.resources;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.services.resources.resource;
+public import models.foundation.crm.services.resources.resource;
 
-public import models.applications.foundations.crm.services.resources.expansion;
-public import models.applications.foundations.crm.services.resources.specification;
+public import models.foundation.crm.services.resources.expansion;
+public import models.foundation.crm.services.resources.specification;

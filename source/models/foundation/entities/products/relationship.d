@@ -1,7 +1,7 @@
-module models.applications.foundations.products.relationship;
+module models.foundation.products.relationship;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Information about the selling relationship between two products, including the relationship type, such as up-sell, cross-sell, substitute, or accessory.
 class DAPLProductRelationship : DOOPEntity {

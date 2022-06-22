@@ -1,4 +1,4 @@
-module models.applications.foundations.crm.projects.scheduling;
+module models.foundation.crm.projects.scheduling;
 
 @safe:
-import models.applications;
+import models.foundation;

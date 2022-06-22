@@ -1,8 +1,8 @@
-module models.applications.foundations.products;
+module models.foundation.products;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.products.product;
-public import models.applications.foundations.products.association;
-public import models.applications.foundations.products.relationship;
+public import models.foundation.products.product;
+public import models.foundation.products.association;
+public import models.foundation.products.relationship;

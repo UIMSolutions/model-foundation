@@ -1,4 +1,4 @@
-module models.applications.foundations.financial;
+module models.foundation.financial;
 
 @safe:
-import models.applications;
+import models.foundation;

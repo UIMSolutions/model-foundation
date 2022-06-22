@@ -1,13 +1,13 @@
-module models.applications.foundations.crm.sales;
+module models.foundation.crm.sales;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.sales.competitors;
-public import models.applications.foundations.crm.sales.discounts;
-public import models.applications.foundations.crm.sales.opportunities;
-public import models.applications.foundations.crm.sales.orders;
-public import models.applications.foundations.crm.sales.quotes;
+public import models.foundation.crm.sales.competitors;
+public import models.foundation.crm.sales.discounts;
+public import models.foundation.crm.sales.opportunities;
+public import models.foundation.crm.sales.orders;
+public import models.foundation.crm.sales.quotes;
 
-public import models.applications.foundations.crm.sales.attachment;
-public import models.applications.foundations.crm.sales.literature;
+public import models.foundation.crm.sales.attachment;
+public import models.foundation.crm.sales.literature;

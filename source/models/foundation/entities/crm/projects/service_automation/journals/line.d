@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.journals.line;
+module models.foundation.crm.projects.service_automation.journals.line;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // nposted business transaction line details.
 class DAPLJournalLine : DOOPEntity {

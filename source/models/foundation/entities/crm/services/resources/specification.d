@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.services.resources.specification;
+module models.foundation.crm.services.resources.specification;
 
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Selection rule that allows the scheduling engine to select a number of resources from a pool of resources. The rules can be associated with a service.
 class DAPLResourceSpecification : DOOPEntity {

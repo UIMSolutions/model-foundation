@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.transactions.categories.category;
+module models.foundation.crm.projects.service_automation.transactions.categories.category;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Business transaction categories to classify costs and revenue.
 class DAPLTransactionCategory : DOOPEntity {

@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.projects.service_automation.journals;
+module models.foundation.crm.projects.service_automation.journals;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.projects.service_automation.journals.journal;
+public import models.foundation.crm.projects.service_automation.journals.journal;
 
-public import models.applications.foundations.crm.projects.service_automation.journals.line;
+public import models.foundation.crm.projects.service_automation.journals.line;

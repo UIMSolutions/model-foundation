@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.transactions.connection;
+module models.foundation.crm.projects.service_automation.transactions.connection;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // TransactionConnection of a user in the hierarchy
 class DAPLTransactionConnection : DOOPEntity {

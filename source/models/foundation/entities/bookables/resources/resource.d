@@ -1,7 +1,7 @@
-module models.applications.foundations.bookables.resources.resource;
+module models.foundation.bookables.resources.resource;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 static this() {
   createEntities[DAPLBookableResource.namespace] = (Json json) => APLBookableResource(json); 

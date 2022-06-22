@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.team_membership;
+module models.foundation.crm.team_membership;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // TeamMembership that is attached to one or more objects, including other notes.
  /*  class DAPLTeamMembership : DOOPEntity {

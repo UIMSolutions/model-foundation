@@ -1,9 +1,9 @@
-module models.applications.foundations.crm.sales.orders;
+module models.foundation.crm.sales.orders;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.sales.orders.order;
+public import models.foundation.crm.sales.orders.order;
 
-public import models.applications.foundations.crm.sales.orders.close;
-public import models.applications.foundations.crm.sales.orders.product;
+public import models.foundation.crm.sales.orders.close;
+public import models.foundation.crm.sales.orders.product;

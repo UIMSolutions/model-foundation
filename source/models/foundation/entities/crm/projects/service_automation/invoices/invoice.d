@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.invoices.invoice;
+module models.foundation.crm.projects.service_automation.invoices.invoice;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Order that has been billed.
 class DAPLInvoice : DOOPEntity {

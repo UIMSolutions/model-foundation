@@ -1,12 +1,17 @@
-module models.applications.foundations.crm.projects.service_automation.estimates.line;
+module models.foundation.crm.projects.service_automation.estimates.line;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Estimates on a per day timescale.
-class DAPLEstimateLine : DOOPEntity {
-  this() { super();
-    this.addValues([
+class DEstimateLineEntity : DOOPEntity {
+  mixin(EntityThis!("EstimateLineEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -73,8 +78,8 @@ class DAPLEstimateLine : DOOPEntity {
     ]);
   }
 
-  override string entityClass() { return "aplEstimateLine"; }
-  override string entityClasses() { return "aplEstimateLines"; }
+  override string entityClass() { return "EstimateLineEntity"; }
+  override string entityClasses() { return "EstimateLineEntitys"; }
 
   this(UUID myId) { 
     this(); this.id(myId); }
@@ -85,15 +90,15 @@ class DAPLEstimateLine : DOOPEntity {
   this(Json aJson) { 
     this(); this.fromJson(aJson); }
 }
-auto APLEstimateLine() { return new DAPLEstimateLine; } 
-auto APLEstimateLine(Json json) { return new DAPLEstimateLine(json); } 
+auto EstimateLineEntity() { return new DEstimateLineEntity; } 
+auto EstimateLineEntity(Json json) { return new DEstimateLineEntity(json); } 
 
 version(test_library) {
   unittest {
     
-    assert(APLEstimateLine);
+    assert(EstimateLineEntity);
 
-  auto entity = APLEstimateLine;
+  auto entity = EstimateLineEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

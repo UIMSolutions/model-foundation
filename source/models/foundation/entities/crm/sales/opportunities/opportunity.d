@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.opportunities.opportunity;
+module models.foundation.crm.sales.opportunities.opportunity;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion.
 class DAPLOpportunity : DOOPEntity {

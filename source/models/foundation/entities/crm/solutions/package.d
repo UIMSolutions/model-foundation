@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.solutions;
+module models.foundation.crm.solutions;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.solutions.customers;
-public import models.applications.foundations.crm.solutions.marketing;
-public import models.applications.foundations.crm.solutions.portals;
+public import models.foundation.crm.solutions.customers;
+public import models.foundation.crm.solutions.marketing;
+public import models.foundation.crm.solutions.portals;

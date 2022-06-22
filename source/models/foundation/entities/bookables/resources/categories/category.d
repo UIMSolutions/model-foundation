@@ -1,7 +1,7 @@
-module models.applications.foundations.bookables.resources.categories.category;
+module models.foundation.bookables.resources.categories.category;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Categorize resources that have capacity into categories such as roles.
 class DAPLBookableResourceCategory : DOOPEntity {

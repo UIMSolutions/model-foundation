@@ -1,7 +1,7 @@
-module models.applications.foundations.bookables.resources.group;
+module models.foundation.bookables.resources.group;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Associates resources with resource groups that they are a member of.
 class DAPLBookableResourceGroup : DOOPEntity {

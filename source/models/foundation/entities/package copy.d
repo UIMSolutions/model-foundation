@@ -1,15 +1,15 @@
-module models.applications.foundations;
+module models.foundation;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Packages
-public import models.applications.foundations.bookables;
-public import models.applications.foundations.crm;
-public import models.applications.foundations.financial;
-public import models.applications.foundations.products;
+public import models.foundation.bookables;
+public import models.foundation.crm;
+public import models.foundation.financial;
+public import models.foundation.products;
 
 // Modules
-public import models.applications.foundations.company;
-public import models.applications.foundations.queue;
+public import models.foundation.company;
+public import models.foundation.queue;
 

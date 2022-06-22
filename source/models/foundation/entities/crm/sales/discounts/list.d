@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.discounts.list;
+module models.foundation.crm.sales.discounts.list;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Type of discount specified as either a percentage or an amount.
 class DAPLDiscountList : DOOPEntity {

@@ -1,8 +1,8 @@
-module models.applications.foundations.bookables.resources.categories;
+module models.foundation.bookables.resources.categories;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.bookables.resources.categories.category;
+public import models.foundation.bookables.resources.categories.category;
 
-public import models.applications.foundations.bookables.resources.categories.association;
+public import models.foundation.bookables.resources.categories.association;

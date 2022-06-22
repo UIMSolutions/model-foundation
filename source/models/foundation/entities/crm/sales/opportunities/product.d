@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.opportunities.product;
+module models.foundation.crm.sales.opportunities.product;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Association between an opportunity and a product.
 class DAPLOpportunityProduct : DOOPEntity {

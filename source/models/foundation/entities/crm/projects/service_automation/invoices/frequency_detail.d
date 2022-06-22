@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.invoices.frequency_detail;
+module models.foundation.crm.projects.service_automation.invoices.frequency_detail;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // InvoiceFrequencyDetail of a user in the hierarchy
 class DAPLInvoiceFrequencyDetail : DOOPEntity {

@@ -1,6 +1,6 @@
-module models.applications.foundations.bookables;
+module models.foundation.bookables;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.bookables.resources;
+public import models.foundation.bookables.resources;

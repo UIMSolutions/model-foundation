@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.solutions.customers.segments.segment;
+module models.foundation.crm.solutions.customers.segments.segment;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Defines a group of members that exhibit common traits.
 class DAPLSegment : DOOPEntity {

@@ -1,2 +1,2 @@
-module models.applications.foundations.queue;
+module models.foundation.queue;
 

@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.competitors.competitor;
+module models.foundation.crm.sales.competitors.competitor;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Business competing for the sale represented by a lead or opportunity.
 class DAPLCompetitor : DOOPEntity {

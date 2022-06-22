@@ -1,10 +1,10 @@
-module models.applications.foundations.crm.services;
+module models.foundation.crm.services;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.services.contracts;
-public import models.applications.foundations.crm.services.entitlements;
-public import models.applications.foundations.crm.services.resources;
+public import models.foundation.crm.services.contracts;
+public import models.foundation.crm.services.entitlements;
+public import models.foundation.crm.services.resources;
 
 

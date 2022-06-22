@@ -1,10 +1,10 @@
-module models.applications.foundations.crm.solutions.customers;
+module models.foundation.crm.solutions.customers;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Subpackage
-public import models.applications.foundations.crm.solutions.customers.segments;
+public import models.foundation.crm.solutions.customers.segments;
 
-public import models.applications.foundations.crm.solutions.customers.activity;
-public import models.applications.foundations.crm.solutions.customers.profile;
+public import models.foundation.crm.solutions.customers.activity;
+public import models.foundation.crm.solutions.customers.profile;

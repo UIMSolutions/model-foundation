@@ -1,4 +1,4 @@
-module models.applications.foundations.crm.sales.competitors.address;
+module models.foundation.crm.sales.competitors.address;
 
 @safe:
 import uim.oop;

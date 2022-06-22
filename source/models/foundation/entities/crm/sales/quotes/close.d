@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.sales.quotes.close;
+module models.foundation.crm.sales.quotes.close;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Activity generated when a quote is closed.
 class DAPLQuoteClose : DOOPEntity {

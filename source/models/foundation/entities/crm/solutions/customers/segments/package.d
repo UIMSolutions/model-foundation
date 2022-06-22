@@ -1,10 +1,10 @@
-module models.applications.foundations.crm.solutions.customers.segments;
+module models.foundation.crm.solutions.customers.segments;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Main module
-public import models.applications.foundations.crm.solutions.customers.segments.segment;
+public import models.foundation.crm.solutions.customers.segments.segment;
 
 // Additional module
-public import models.applications.foundations.crm.solutions.customers.segments.membership;
+public import models.foundation.crm.solutions.customers.segments.membership;

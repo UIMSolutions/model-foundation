@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.facility_equipment;
+module models.foundation.crm.facility_equipment;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Resource that can be scheduled.
 class DAPLFacilityEquipment : DOOPEntity {

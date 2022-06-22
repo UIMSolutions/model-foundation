@@ -1,9 +1,9 @@
-module models.applications.foundations.crm.sales.competitors;
+module models.foundation.crm.sales.competitors;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.sales.competitors.address;
-public import models.applications.foundations.crm.sales.competitors.competitor;
-public import models.applications.foundations.crm.sales.competitors.product;
-public import models.applications.foundations.crm.sales.competitors.sales_literature;
+public import models.foundation.crm.sales.competitors.address;
+public import models.foundation.crm.sales.competitors.competitor;
+public import models.foundation.crm.sales.competitors.product;
+public import models.foundation.crm.sales.competitors.sales_literature;

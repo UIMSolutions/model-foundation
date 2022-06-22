@@ -1,18 +1,17 @@
-module models.applications.foundations.bookables.resources.bookings.header;
+module models.foundation.bookables.resources.bookings.header;
 
 @safe:
-import models.applications;
-
-static this() {
-  createEntities[DAPLBookableResourceBookingHeader.namespace] = (Json json) => APLBookableResourceBookingHeader(json); 
-  createEntities["aplBookableResourceBookingHeader"] = (Json json) => APLBookableResourceBookingHeader(json); 
-  createEntities["bookableResourceBookingHeader"] = (Json json) => APLBookableResourceBookingHeader(json); 
-}
+import models.foundation;
 
 // Reservation entity representing the summary of the associated resource bookings.
-class DAPLBookableResourceBookingHeader : DOOPEntity {
-  this() { super();
-    this.addValues([
+class DBookableResourceBookingHeaderEntity : DOOPEntity {
+  mixin(EntityThis!("BookableResourceBookingHeaderEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -33,34 +32,18 @@ class DAPLBookableResourceBookingHeader : DOOPEntity {
       "startTime": TimeAttribute, // Shows the start date and time of the booking summary."]),
       "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcebookingheader with respect to the base currency."]),
       "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceBookingHeader with respect to the base currency."]),
-    ])
-    .addValues([
-      StateCodeAttribute, // Status of the Bookable Resource Booking Header
-      StatusCodeAttribute // Reason for the status of the Bookable Resource Booking Header
-    ]);    
+      ])
+      .registerPath("foundation_companies");
   }
-
-  override string entityClass() { return "aplBookableResourceBookingHeader"; }
-  override string entityClasses() { return "aplBookableResourceBookingHeaders"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLBookableResourceBookingHeader() { return new DAPLBookableResourceBookingHeader; } 
-auto APLBookableResourceBookingHeader(Json json) { return new DAPLBookableResourceBookingHeader(json); } 
+mixin(EntityCalls!("BookableResourceBookingHeaderEntity"));
 
 version(test_library) {
   unittest {
     
-    assert(APLBookableResourceBookingHeader);
+    assert(BookableResourceBookingHeaderEntity);
   
-  auto entity = APLBookableResourceBookingHeader;
+  auto entity = BookableResourceBookingHeaderEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

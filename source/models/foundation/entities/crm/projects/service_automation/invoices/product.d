@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.invoices.product;
+module models.foundation.crm.projects.service_automation.invoices.product;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Line item in an invoice containing detailed billing information for a product.
 class DAPLInvoiceProduct : DOOPEntity {

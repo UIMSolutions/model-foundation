@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.projects.service_automation.estimates;
+module models.foundation.crm.projects.service_automation.estimates;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.projects.service_automation.estimates.estimate;
+public import models.foundation.crm.projects.service_automation.estimates.estimate;
 
-public import models.applications.foundations.crm.projects.service_automation.estimates.line;
+public import models.foundation.crm.projects.service_automation.estimates.line;

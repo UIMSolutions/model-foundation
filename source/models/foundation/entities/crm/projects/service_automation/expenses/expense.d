@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.expenses.expense;
+module models.foundation.crm.projects.service_automation.expenses.expense;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Expense of a user in the hierarchy
 class DAPLExpense : DOOPEntity {

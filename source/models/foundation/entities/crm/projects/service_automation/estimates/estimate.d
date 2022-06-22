@@ -1,7 +1,7 @@
-module models.applications.foundations.crm.projects.service_automation.estimates.estimate;
+module models.foundation.crm.projects.service_automation.estimates.estimate;
 
 @safe:
-import models.applications;
+import models.foundation;
 
 // Labor, cost, and revenue estimates for a project.
 class DAPLEstimate : DOOPEntity {

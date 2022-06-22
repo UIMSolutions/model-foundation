@@ -1,8 +1,8 @@
-module models.applications.foundations.crm.services.contracts;
+module models.foundation.crm.services.contracts;
 
 @safe:
-import models.applications;
+import models.foundation;
 
-public import models.applications.foundations.crm.services.contracts.contract;
+public import models.foundation.crm.services.contracts.contract;
 
-public import models.applications.foundations.crm.services.contracts.line;
+public import models.foundation.crm.services.contracts.line;
