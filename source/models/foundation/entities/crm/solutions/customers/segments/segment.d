@@ -4,9 +4,14 @@ module models.foundation.crm.solutions.customers.segments.segment;
 import models.foundation;
 
 // Defines a group of members that exhibit common traits.
-class DAPLSegment : DOOPEntity {
-  this() { super();
-    this.addValues([
+class DSegmentEntity : DOOPEntity {
+  mixin(EntityThis!("SegmentEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
       "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
@@ -29,32 +34,18 @@ class DAPLSegment : DOOPEntity {
       "stateCode_display": StringAttribute, // 
       "statusCode": StatusCodeAttribute, //Reason for the status of the Segment"]),
       "statusCode_display": StringAttribute, // 
-    ]);
+      ])
+      .registerPath("foundation_segments");
   }
-
-  override string entityClass() { return "aplSegment"; }
-  override string entityClasses() { return "aplSegments"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
-
-   // mixin(GetEntity!("campaign", "campaignId", "APLSegment"));
 }
-auto APLSegment() { return new DAPLSegment; } 
-auto APLSegment(Json json) { return new DAPLSegment(json); } 
+mixin(EntityCalls!("SegmentEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLSegment);
+    assert(SegmentEntity);
 
-  auto entity = APLSegment;
+  auto entity = SegmentEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

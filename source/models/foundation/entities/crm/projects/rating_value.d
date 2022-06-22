@@ -4,8 +4,8 @@ module models.foundation.crm.projects.rating_value;
 import models.foundation;
 
 // A unique value associated with a rating model that allows providing a user friendly rating value..
-class DAPLRatingValue : DOOPEntity {
-  mixin(EntityThis!("APLRatingValue"));
+class DRatingValueEntity : DOOPEntity {
+  mixin(EntityThis!("RatingValueEntity"));
   
   override void initialize() {
     super.initialize;
@@ -34,16 +34,16 @@ class DAPLRatingValue : DOOPEntity {
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the RatingValue with respect to the base currency."]),
         "isDefault": BooleanAttribute, // 
       ])
-      .registerPath("APLRatingValue");
+      .registerPath("foundation_rating.values");
   }
 }
-mixin(EntityCalls!("APLRatingValue"));
+mixin(EntityCalls!("RatingValueEntity"));
 
 version(test_model_foundation) {
   unittest {
-    assert(APLRatingValue);
+    assert(RatingValueEntity);
   
-  auto entity = APLRatingValue;
+  auto entity = RatingValueEntity;
   // auto repository = OOPFileRepository("./tests");
 /* /*  repository.create("entities", entity.entityClasses, entity.toJson);
 

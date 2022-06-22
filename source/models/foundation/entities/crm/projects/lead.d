@@ -11,6 +11,10 @@ class DAPLLead : DOOPEntity {
     super.initialize;
 
     this
+      .addValues([ // fix values
+        StateCodeAttribute, // Shows whether the lead is open, qualified, or disqualified. Qualified and disqualified leads are read-only and can't be edited unless they are reactivated.
+        StatusCodeAttribute // Type a subject or descriptive name, such as the expected order, company name, or marketing source list, to identify the lead.
+      ])
       .addValues([
         "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
@@ -148,10 +152,6 @@ class DAPLLead : DOOPEntity {
         "originatingCaseId": UUIDAttribute, // This attribute is used for Sample Service Business Processes."]),
         "qualifyingOpportunityId": UUIDAttribute, // Choose the opportunity that the lead was qualified on and then converted to."]),
         "GDPROptOut": StringAttribute, // Describes whether lead is opted out or not"]),"orderType": StringAttribute, // Whether the Opportunity created when qualifying this Lead is for an Item- based or a Work-based sale"]),"orderType_display": StringAttribute, //     
-      ])
-      .addValues([
-        StateCodeAttribute, // Shows whether the lead is open, qualified, or disqualified. Qualified and disqualified leads are read-only and can't be edited unless they are reactivated.
-        StatusCodeAttribute // Type a subject or descriptive name, such as the expected order, company name, or marketing source list, to identify the lead.
       ]);      
   }
 

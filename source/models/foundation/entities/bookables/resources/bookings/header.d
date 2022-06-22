@@ -33,7 +33,7 @@ class DBookableResourceBookingHeaderEntity : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcebookingheader with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceBookingHeader with respect to the base currency."]),
       ])
-      .registerPath("foundation_companies");
+      .registerPath("foundation_bookable.resource.booking.headers");
   }
 }
 mixin(EntityCalls!("BookableResourceBookingHeaderEntity"));

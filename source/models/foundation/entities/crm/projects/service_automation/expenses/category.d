@@ -11,7 +11,7 @@ class DExpenseCategoryEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
+      .addValues([ // fix values
         StateCodeAttribute, // Status of the Expense Category
         StatusCodeAttribute // Reason for the status of the Expense Category
       ])
