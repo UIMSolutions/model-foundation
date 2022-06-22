@@ -5,31 +5,24 @@ import models.foundation;
 
 // Association between a competitor and a product offered by the competitor.
 class DAPLCompetitorProduct : DOOPEntity {
-  this() { super();
-    this.addValues([
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "competitorId": UUIDAttribute, // 
-      "productId": UUIDAttribute, // 
-    ]);
+  mixin(EntityThis!("CompetitorProductEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "competitorId": UUIDAttribute, // 
+        "productId": UUIDAttribute, // 
+      ])
+      .registerPath("foundation_competitorProductEntity");
   }
-
-  override string entityClass() { return "aplCompetitorProduct"; }
-  override string entityClasses() { return "aplCompetitorProducts"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLCompetitorProduct() { return new DAPLCompetitorProduct; } 
-auto APLCompetitorProduct(Json json) { return new DAPLCompetitorProduct(json); } 
+mixin(EntityCalls!("CompetitorProductEntity"));
 
 version(test_model_foundation) {
   unittest {
