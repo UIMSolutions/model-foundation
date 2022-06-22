@@ -5,8 +5,13 @@ import models.foundation;
 
 // Information about the selling relationship between two products, including the relationship type, such as up-sell, cross-sell, substitute, or accessory.
 class DAPLProductRelationship : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "productSubstituteId": UUIDAttribute, // Shows the unique identifier of the product relationship."]),
       "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
@@ -47,8 +52,8 @@ class DAPLProductRelationship : DOOPEntity {
 auto APLProductRelationship() { return new DAPLProductRelationship; } 
 auto APLProductRelationship(Json json) { return new DAPLProductRelationship(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLProductRelationship);
   

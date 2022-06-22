@@ -47,8 +47,8 @@ class DBookableResourceBookingEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BookableResourceBookingEntity"));
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(BookableResourceBookingEntity);
   

@@ -5,8 +5,13 @@ import models.foundation;
 
 // Information about products and their pricing information.
 class DAPLProduct : DOOPEntity {
-  this() { super();
-    this.addValues([
+  mixin(EntityThis!("xxx"));
+  
+  override void initialize() {
+    super.initialize;
+
+    this
+      .addValues([
       "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the product."]),
       "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who last modified the product."]),
       "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
@@ -77,8 +82,8 @@ class DAPLProduct : DOOPEntity {
 auto APLProduct() { return new DAPLProduct; } 
 auto APLProduct(Json json) { return new DAPLProduct(json); } 
 
-version(test_model_foundation) {
-  unittest {
+unittest {
+  version(test_model_foundation) {
     
     assert(APLProduct);
   
