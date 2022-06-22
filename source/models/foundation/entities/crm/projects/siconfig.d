@@ -3,10 +3,17 @@ module models.foundation.crm.projects.siconfig;
 @safe:
 import models.foundation;
 
-// 
-class DAPLSiconfig : DOOPEntity {
-  this() { super();
+class DSiconfigEntity : DOOPEntity {
+  mixin(EntityThis!("SiconfigEntity"));
+  
+  override void initialize() {
+    super.initialize;
+
     this
+      .addValues([ // fix values
+        StateCodeAttribute, // Status of the siconfig
+        StatusCodeAttribute // Reason for the status of the siconfig
+      ])        
       .addValues([
         "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
@@ -21,34 +28,18 @@ class DAPLSiconfig : DOOPEntity {
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
         "siConfigId": UUIDAttribute, // Unique identifier for entity instances"]),
         "version": StringAttribute, // The name of the custom entity."]),
-      ])
-      .addValues([
-        StateCodeAttribute, // Status of the siconfig
-        StatusCodeAttribute // Reason for the status of the siconfig
-      ]);        
+       ])
+      .registerPath("foundation_siconfigs");
   }
-
-  override string entityClass() { return "aplSiconfig"; }
-  override string entityClasses() { return "aplSiconfigs"; }
-
-  this(UUID myId) { 
-    this(); this.id(myId); }
-  this(string myName) { 
-    this(); this.name(myName); }
-  this(UUID myId, string myName) { 
-    this(); this.id(myId).name(myName); }
-  this(Json aJson) { 
-    this(); this.fromJson(aJson); }
 }
-auto APLSiconfig() { return new DAPLSiconfig; } 
-auto APLSiconfig(Json json) { return new DAPLSiconfig(json); } 
+mixin(EntityCalls!("SiconfigEntity"));
 
 version(test_model_foundation) {
   unittest {
     
-    assert(APLSiconfig);
+    assert(SiconfigEntity);
   
-  auto entity = APLSiconfig;
+  auto entity = SiconfigEntity;
   // auto repository = OOPFileRepository("./tests");
 /*  repository.create("entities", entity.entityClasses, entity.toJson);
 
