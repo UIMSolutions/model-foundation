@@ -27,7 +27,6 @@ class DCustomerProfileEntity : DOOPEntity {
         "owningTeam": StringAttribute, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-        "versionNumber": NumberAttribute, // Version Number"]),
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the entity with respect to the base currency."]),
         "accountNumber": NumberAttribute, // Type an ID number or code for the customer to quickly search and identify the customer in system views."]),
         "affiliations": StringAttribute, // Different affiliations associated with the customer."]),
