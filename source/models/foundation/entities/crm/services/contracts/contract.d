@@ -4,14 +4,15 @@ module models.foundation.crm.services.contracts.contract;
 import models.foundation;
 
 // Agreement to provide customer service during a specified amount of time or number of cases.
-class DAPLContract : DOOPEntity {
-  mixin(EntityThis!("APLContract"));
+class DAPLContractEntity : DOOPEntity {
+  mixin(EntityThis!("APLContractEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([
+        OwnerIdAttribute, // Owner Id
         StateCodeAttribute, // Shows whether the contract is in draft, invoiced, active, on hold, canceled, or expired. You can edit only the contracts that are in draft status.
         StatusCodeAttribute // Select the contract's status.
       ]);  
@@ -20,7 +21,6 @@ class DAPLContract : DOOPEntity {
         "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": UserIdAttribute, // Date and time that the record was migrated."]),
         "importSequenceNumber": UserIdAttribute, // Sequence number of the import that created this record."]),
-        "ownerId": UserIdAttribute, // Owner Id"]),
         "ownerIdType": UserIdAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnit": UserIdAttribute, // Unique identifier for the business unit that owns the record"]),
         "owningUserId": UserIdAttribute, // Unique identifier of the user that owns the activity."]),
@@ -72,7 +72,7 @@ class DAPLContract : DOOPEntity {
       .registerPath("foundation_contracts");
   }
 }
-mixin(EntityCalls!("APLContract"));
+mixin(EntityCalls!("APLContractEntity"));
 
 unittest {
   version(test_model_foundation) {
