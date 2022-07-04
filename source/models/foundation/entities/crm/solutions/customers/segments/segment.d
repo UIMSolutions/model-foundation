@@ -12,11 +12,15 @@ class DSegmentEntity : DOOPEntity {
 
     this
       .addValues([
+        OwnerIdAttribute, // Owner Id"]),
+        StateCodeAttribute, // Status of the Segment"]),
+        StatusCodeAttribute, //Reason for the status of the Segment"]),
+       ])
+      .addValues([
         "createdOnBehalfBy": StringAttribute, // Shows who created the record on behalf of another user."]),
         "modifiedOnBehalfBy": StringAttribute, // Shows who last updated the record on behalf of another user."]),
         "overriddenCreatedOn": StringAttribute, // Date and time that the record was migrated."]),
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-        "ownerId": StringAttribute, // Owner Id"]),
         "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
         "owningBusinessUnitId": BusinessUnitIdAttribute, // Unique identifier for the business unit that owns the record"]),
         "owningUser": StringAttribute, // Unique identifier of the user that owns the activity."]),
@@ -30,10 +34,6 @@ class DSegmentEntity : DOOPEntity {
         "segmentType": StringAttribute, // Segment type."]),
         "segmentType_display": StringAttribute, // 
         "version": StringAttribute, // Denotes latest version of a segment for manual tracking."]),
-        "stateCode": StateCodeAttribute, // Status of the Segment"]),
-        "stateCode_display": StringAttribute, // 
-        "statusCode": StatusCodeAttribute, //Reason for the status of the Segment"]),
-        "statusCode_display": StringAttribute, // 
       ])
       .registerPath("foundation_segments");
   }
