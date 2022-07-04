@@ -4,8 +4,8 @@ module models.foundation.crm.services.resources.expansion;
 import models.foundation;
 
 // 
-class DAPLResourceExpansion : DOOPEntity {
-  mixin(EntityThis!("APLResourceExpansion"));
+class DAPLResourceExpansionEntity : DOOPEntity {
+  mixin(EntityThis!("APLResourceExpansionEntity"));
   
   override void initialize() {
     super.initialize;
@@ -26,7 +26,7 @@ class DAPLResourceExpansion : DOOPEntity {
       .registerPath("foundation_crm.services.resources.expansions");
   }
 }
-mixin(EntityCalls!("APLResourceExpansion"));
+mixin(EntityCalls!("APLResourceExpansionEntity"));
 
 unittest {
   version(test_model_foundation) {
