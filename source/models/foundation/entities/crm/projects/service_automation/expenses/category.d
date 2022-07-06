@@ -16,18 +16,18 @@ class DExpenseCategoryEntity : DOOPEntity {
         StatusCodeAttribute // Reason for the status of the Expense Category
       ])
       .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
-        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-        "expenseCategoryuId": UUIDAttribute, // Select the Transaction Category associated with Expense Category."]),
-        "expenseType": StringAttribute, // Enter the type of expense"]),
+        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record.
+        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record.
+        "organizationId": UUIDAttribute, // Unique identifier for the organization
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only.
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created.
+        "expenseCategoryuId": UUIDAttribute, // Select the Transaction Category associated with Expense Category.
+        "expenseType": StringAttribute, // Enter the type of expense
         "expenseType_display": StringAttribute, // 
-        "receiptRequired": StringAttribute, // Shows whether the expense entry requires a receipt."]),
-        "receiptRequired_display": StringAttribute, // projectServiceAutomation"]),
+        "receiptRequired": StringAttribute, // Shows whether the expense entry requires a receipt.
+        "receiptRequired_display": StringAttribute, // projectServiceAutomation
       ])
       .registerPath("foundation_expense.categories");
   }

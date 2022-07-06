@@ -16,17 +16,17 @@ class DTransactionCategoryEntity : DOOPEntity {
         StatusCodeAttribute // Reason for the status of the Transaction Category
       ])
       .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
-        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-        "utcConversionTimeZoneCode": StringAttribute, //Time zone code that was in use when the record was created."]),
-        "billingType": StringAttribute, //Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total"]),
-        "billingType_display": StringAttribute, //"]),
-        "defaultUnit": StringAttribute, //"]),
-        "unitGroup": StringAttribute, //Select the unit schedule that is associated with the transaction category."]),
+        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record.
+        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record.
+        "organizationId": UUIDAttribute, // Unique identifier for the organization
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only.
+        "utcConversionTimeZoneCode": StringAttribute, //Time zone code that was in use when the record was created.
+        "billingType": StringAttribute, //Select the default billing type of project transactions in this category. Valid values are Chargeable, Non chargeable or Complimentary. Only chargeable transactions will add to an invoice total
+        "billingType_display": StringAttribute, //
+        "defaultUnit": StringAttribute, //
+        "unitGroup": StringAttribute, //Select the unit schedule that is associated with the transaction category.
       ])
       .registerPath("foundation_transaction.categories");
   }

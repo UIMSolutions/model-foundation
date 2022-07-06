@@ -16,12 +16,12 @@ class DTransactionCategoryClassificationEntity : DOOPEntity {
         StatusCodeAttribute // Reason for the status of the Transaction Category Classification
       ])
       .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record."]),
-        "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
-        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record.
+        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record.
+        "organizationId": UUIDAttribute, // Unique identifier for the organization
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only.
         "utcConversionTimeZoneCode": StringAttribute, //Time zone code that was in use when the record was created.
         "transactionCategory": StringAttribute, //
         "transactionClassification": StringAttribute, //
