@@ -1,4 +1,4 @@
-module models.foundation.bookables.resources.bookings.header;
+module models.foundation.entities.bookables.resources.bookings.header;
 
 @safe:
 import models.foundation;
@@ -40,16 +40,8 @@ mixin(EntityCalls!("BookableResourceBookingHeaderEntity"));
 
 unittest {
   version(test_model_foundation) {
-    
     assert(BookableResourceBookingHeaderEntity);
   
-  auto entity = BookableResourceBookingHeaderEntity;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */ 
+    auto entity = BookableResourceBookingHeaderEntity;
   }
 }
