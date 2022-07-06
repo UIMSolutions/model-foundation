@@ -1,7 +1,7 @@
 module models.foundation.entities.bookables.resources.bookings;
 
-// Main
+// Main module
 public import models.foundation.entities.bookables.resources.bookings.booking;
 
-// Additional
+// Additional module
 public import models.foundation.entities.bookables.resources.bookings.header;
