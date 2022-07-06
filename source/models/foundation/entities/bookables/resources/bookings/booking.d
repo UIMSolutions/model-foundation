@@ -1,4 +1,4 @@
-module models.foundation.bookables.resources.bookings.booking;
+module models.foundation.entities.bookables.resources.bookings.booking;
 
 @safe:
 import models.foundation;
@@ -42,23 +42,15 @@ class DBookableResourceBookingEntity : DOOPEntity {
         "exchangeRate": StringAttribute, // Exchange rate for the currency associated with the bookableresourcebooking with respect to the base currency."]),
         "transactionCurrencyId": CurrencyIdAttribute, // Exchange rate for the currency associated with the BookableResourceBooking with respect to the base currency."]),
       ])
-      .registerPath("foundation_bookableresourcebookings");
+      .registerPath("foundation_bookables.resources.bookings");
   }
 }
 mixin(EntityCalls!("BookableResourceBookingEntity"));
 
 unittest {
   version(test_model_foundation) {
-    
     assert(BookableResourceBookingEntity);
   
     auto entity = BookableResourceBookingEntity;
-  // auto repository = OOPFileRepository("./tests");
-/*  repository.create("entities", entity.entityClasses, entity.toJson);
-
-  auto json = repository.findOne("entities", entity.entityClasses, ["id":entity.id.toString]);
-  assert(json != Json(null), entity.id.toString~" not found");
-
-  repository.cleanupConnections; */ 
   }
 }
