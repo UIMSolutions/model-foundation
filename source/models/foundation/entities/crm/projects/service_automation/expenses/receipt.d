@@ -12,13 +12,13 @@ class DExpenseReceiptEntity : DOOPEntity {
 
     this
       .addValues([
+        CreatedOnBehalfByAttribute, // Shows who created the record on behalf of another user.
+        ModifiedOnBehalfByAttribute, // Shows who last updated the record on behalf of another user.
         OwnerIdAttribute, // Owner Id
         StateCodeAttribute, // Status of the Expense Receipt
         StatusCodeAttribute // Reason for the status of the Expense Receipt
       ])
       .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user.
-        "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user.
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
         "owningBusinessUnitId": BusinessUnitIdAttribute, // Unique identifier for the business unit that owns the record

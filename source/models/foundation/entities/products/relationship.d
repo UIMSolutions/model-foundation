@@ -11,10 +11,14 @@ class DProductRelationshipEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        ModifiedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        StateCodeAttribute, // Status of the Bookable Resource Group
+        StatusCodeAttribute // Reason for the status of the Bookable Resource Group      
+      ])
+      .addValues([ // individual values
         "productSubstituteId": UUIDAttribute, // Shows the unique identifier of the product relationship."]),
-        "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
         "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -23,10 +27,6 @@ class DProductRelationshipEntity : DOOPEntity {
         "productId": UUIDAttribute, // Shows the product that the relationship is defined for."]),
         "salesRelationshipType": StringAttribute, // Select the type of the product relationship."]),
         "salesRelationshipType_display": StringAttribute, // 
-        "stateCode": StateCodeAttribute, // Select the product relationship's status."]),
-        "stateCode_display": StringAttribute, // 
-        "statusCode": StatusCodeAttribute, //Shows whether the product relationship is active or inactive."]),
-        "statusCode_display": StringAttribute, // 
         "substitutedProductId": UUIDAttribute, // Select the related product that the relationship needs to be defined for."]),
         "direction": StringAttribute, // Select whether the relationship is unidirectional or bidirectional."]),
         "direction_display": StringAttribute, // 

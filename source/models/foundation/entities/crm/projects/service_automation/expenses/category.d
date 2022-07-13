@@ -12,12 +12,12 @@ class DExpenseCategoryEntity : DOOPEntity {
 
     this
       .addValues([ // fix values
+        CreatedOnBehalfByAttribute, // Unique identifier of the delegate user who created the record.
+        ModifiedOnBehalfByAttribute, // Unique identifier of the delegate user who modified the record.
         StateCodeAttribute, // Status of the Expense Category
         StatusCodeAttribute // Reason for the status of the Expense Category
       ])
       .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the record.
-        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who modified the record.
         "organizationId": UUIDAttribute, // Unique identifier for the organization
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.

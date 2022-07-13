@@ -11,9 +11,13 @@ class DProductEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who created the product."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Unique identifier of the delegate user who last modified the product."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        ModifiedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        StateCodeAttribute, // Status of the Bookable Resource Group
+        StatusCodeAttribute // Reason for the status of the Bookable Resource Group      
+      ])
+      .addValues([ // individual values
         "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -47,10 +51,6 @@ class DProductEntity : DOOPEntity {
         "size": StringAttribute, // Product size."]),
         "standardCost": StringAttribute, // Standard cost of the product."]),
         "standardCostBase": StringAttribute, // Value of the Standard Cost in base currency."]),
-        "stateCode": StateCodeAttribute, // Status of the product."]),
-        "stateCode_display": StringAttribute, // 
-        "statusCode": StatusCodeAttribute, //Reason for the status of the product."]),
-        "statusCode_display": StringAttribute, // 
         "stockVolume": StringAttribute, // Stock volume of the product."]),
         "stockWeight": StringAttribute, // Stock weight of the product."]),
         "supplierName": StringAttribute, // Name of the product's supplier."]),

@@ -11,9 +11,13 @@ class DProductAssociationEntity : DOOPEntity {
     super.initialize;
 
     this
-      .addValues([
-        "createdOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
-        "modifiedOnBehalfBy": UserIdAttribute, // Shows who created the record on behalf of another user."]),
+      .addValues([ // fix values
+        CreatedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        ModifiedOnBehalfByAttribute, // Shows who created the record on behalf of another user."]),
+        StateCodeAttribute, // Status of the Bookable Resource Group
+        StatusCodeAttribute // Reason for the status of the Bookable Resource Group      
+      ])
+      .addValues([ // individual values
         "organizationId": UUIDAttribute, // Unique identifier for the organization"]),
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
@@ -25,10 +29,6 @@ class DProductAssociationEntity : DOOPEntity {
         "productIsRequired": StringAttribute, // Select whether the associated product is required or optional."]),
         "productIsRequired_display": StringAttribute, // f"]),
         "uoMId": UUIDAttribute, // Shows the unit of the product association."]),
-        "stateCode": StateCodeAttribute, // Shows whether the associated product is active or inactive."]),
-        "stateCode_display": StringAttribute, // f"]),
-        "statusCode": StatusCodeAttribute, //Select the associated product's status."]),
-        "statusCode_display": StringAttribute, // f"]),
         "propertyCustomizationStatus": StringAttribute, // Shows whether the item has properties that can be customized."]),
         "propertyCustomizationStatus_display": StringAttribute, // f"]),
         "exchangeRate": StringAttribute, // Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."]),

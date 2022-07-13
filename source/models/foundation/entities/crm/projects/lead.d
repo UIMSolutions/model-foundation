@@ -12,6 +12,7 @@ class DLeadEntity : DOOPEntity {
 
     this
       .addValues([ // fix values
+        OwnerIdAttribute, // Owner Id
         StateCodeAttribute, // Shows whether the lead is open, qualified, or disqualified. Qualified and disqualified leads are read-only and can't be edited unless they are reactivated.
         StatusCodeAttribute // Type a subject or descriptive name, such as the expected order, company name, or marketing source list, to identify the lead.
       ])
@@ -20,7 +21,7 @@ class DLeadEntity : DOOPEntity {
         "modifiedOnBehalfBy": UserIdAttribute, // Shows who last updated the record on behalf of another user.
         "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated.
         "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record.
-        "ownerId": UUIDAttribute, // Owner Id"ownerIdType": StringAttribute, // The type of owner, either User or Team.
+        "ownerIdType": StringAttribute, // The type of owner, either User or Team.
         "owningBusinessUnitId": BusinessUnitIdAttribute, // Unique identifier for the business unit that owns the record"owningUserId": UserIdAttribute, // Unique identifier for the user that owns the record.
         "owningTeamId": TeamIdAttribute, // , // Unique identifier for the team that owns the record.
         "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only.
