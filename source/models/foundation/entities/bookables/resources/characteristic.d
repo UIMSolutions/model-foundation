@@ -42,8 +42,7 @@ class DBookableResourceCharacteristicEntity : DOOPEntity {
 }
 mixin(EntityCalls!("BookableResourceCharacteristicEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(BookableResourceCharacteristicEntity);
   
@@ -59,8 +58,7 @@ unittest {
   }
 }
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     auto script = crudScripts();
   }

@@ -32,8 +32,7 @@ import models.foundation;
 auto APLTeamMembership() { return new DAPLTeamMembership; } 
 auto APLTeamMembership(Json json) { return new DAPLTeamMembership(json); }  */
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
   /* // auto entity = APLTeamMembership;
   // auto repository = OOPFileRepository("./tests");
