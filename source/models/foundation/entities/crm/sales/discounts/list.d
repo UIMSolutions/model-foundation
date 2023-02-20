@@ -7,7 +7,7 @@ import models.foundation;
 class DDiscountListEntity : DOOPEntity {
   mixin(EntityThis!("DiscountListEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

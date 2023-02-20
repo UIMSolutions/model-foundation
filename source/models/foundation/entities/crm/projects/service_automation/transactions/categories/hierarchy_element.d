@@ -6,7 +6,7 @@ import models.foundation;
 class DTransactionCategoryHierarchyElementEntity : DOOPEntity {
   mixin(EntityThis!("TransactionCategoryHierarchyElementEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

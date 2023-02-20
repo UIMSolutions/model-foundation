@@ -7,7 +7,7 @@ import models.foundation;
 class DCompetitorEntity : DOOPEntity {
   mixin(EntityThis!("CompetitorEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

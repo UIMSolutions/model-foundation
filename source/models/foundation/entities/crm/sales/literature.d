@@ -7,7 +7,7 @@ import models.foundation;
 class DAPLSalesLiterature : DOOPEntity {
   mixin(EntityThis!("APLSalesLiterature"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
