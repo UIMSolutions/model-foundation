@@ -8,7 +8,7 @@ class DBookableResourceCharacteristicEntity : DOOPEntity {
   mixin(EntityThis!("BookableResourceCharacteristicEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values

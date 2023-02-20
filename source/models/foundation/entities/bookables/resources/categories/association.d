@@ -8,7 +8,7 @@ class DBookableResourceCategoryAssociationEntity : DOOPEntity {
   mixin(EntityThis!("BookableResourceCategoryAssociationEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values

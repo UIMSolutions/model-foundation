@@ -8,7 +8,7 @@ class DCompanyEntity : DOOPEntity {
   mixin(EntityThis!("CompanyEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

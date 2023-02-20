@@ -8,7 +8,7 @@ class DCampaignEntity : DOOPEntity {
   mixin(EntityThis!("CampaignEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

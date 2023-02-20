@@ -8,7 +8,7 @@ class DBookableResourceBookingHeaderEntity : DOOPEntity {
   mixin(EntityThis!("BookableResourceBookingHeaderEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
