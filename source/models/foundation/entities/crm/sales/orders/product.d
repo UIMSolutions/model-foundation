@@ -7,7 +7,7 @@ import models.foundation;
 class DOrderProductEntity : DOOPEntity {
   mixin(EntityThis!("OrderProductEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

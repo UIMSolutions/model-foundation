@@ -7,7 +7,7 @@ import models.foundation;
 class DOpportunityEntity : DOOPEntity {
   mixin(EntityThis!("OpportunityEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

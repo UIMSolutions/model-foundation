@@ -7,7 +7,7 @@ import models.foundation;
 class DQuoteCloseEntity : DOOPEntity {
   mixin(EntityThis!("QuoteCloseEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
