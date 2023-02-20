@@ -8,7 +8,7 @@ class DSegmentMembershipEntity : DOOPEntity {
   mixin(EntityThis!("SegmentMembershipEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -27,10 +27,10 @@ class DSegmentMembershipEntity : DOOPEntity {
         "owningTeam": StringAttribute, // Unique identifier for the team that owns the record."]),
         "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
         "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-        "customerProfileId": StringAttribute, // Customer Profile Id"]),
+        "customerProfileId": UUIDAttribute, // Customer Profile Id"]),
         "lastEvaluationDate": DateAttribute, // Latest date when a segment memberships is evaluated/refreshed."]),
-        "segmentId": StringAttribute, // Segment identifiers customers are associated with."]),
-        "segmentMembershipId": StringAttribute, // Unique identifier for entity instances"]),
+        "segmentId": UUIDAttribute, // Segment identifiers customers are associated with."]),
+        "segmentMembershipId": UUIDAttribute, // Unique identifier for entity instances"]),
         "version": StringAttribute, // Denotes latest version of the customer segment membership for manual tracking."]),
       ])
       .registerPath("foundation_segment.memberships");

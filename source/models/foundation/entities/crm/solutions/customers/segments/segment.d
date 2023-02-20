@@ -8,7 +8,7 @@ class DSegmentEntity : DOOPEntity {
   mixin(EntityThis!("SegmentEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -30,7 +30,7 @@ class DSegmentEntity : DOOPEntity {
         "lastEvaluationDate": DateAttribute, // Latest date when segments are evaluated/refreshed."]),
         "memberCount": StringAttribute, // Count of customers/members associated with a segment."]),
         "queryDefinition": StringAttribute, // Segment definition including groups, filters, conditions etc."]),
-        "segmentId": StringAttribute, // Unique identifier for entity instances"]),
+        "segmentId": UUIDAttribute, // Unique identifier for entity instances"]),
         "segmentType": StringAttribute, // Segment type."]),
         "segmentType_display": StringAttribute, // 
         "version": StringAttribute, // Denotes latest version of a segment for manual tracking."]),

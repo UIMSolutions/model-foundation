@@ -8,7 +8,7 @@ class DCustomerActivityEntity : DOOPEntity {
   mixin(EntityThis!("CustomerActivityEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -33,8 +33,8 @@ class DCustomerActivityEntity : DOOPEntity {
         "actualStartDate": DateAttribute, // Start time of an activity."]),
         "attachmentReferences": StringAttribute, // References to any attachment(s) for an activity."]),
         "community": StringAttribute, // Activity community."]),
-        "customerActivityId": StringAttribute, // Unique identifier for entity instances"]),
-        "customerProfileId": StringAttribute, // 
+        "customerActivityId": UUIDAttribute, // Unique identifier for entity instances"]),
+        "customerProfileId": UUIDAttribute, // 
         "mentions": StringAttribute, // Activity mentions."]),
         "message": StringAttribute, // Message."]),
         "numberOfResponses": StringAttribute, // Number of responses for/on an activity, like, number of emails on a thread, number of likes on a LinkedIn, Facebook post etc."]),
