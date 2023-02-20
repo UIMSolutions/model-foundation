@@ -38,8 +38,7 @@ class DDiscountEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DiscountEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(DiscountEntity);
   

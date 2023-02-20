@@ -23,8 +23,7 @@ class DCompetitorSalesLiteratureEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CompetitorSalesLiteratureEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLCompetitorSalesLiterature);
 

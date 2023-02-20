@@ -40,8 +40,7 @@ class DTransactionCategoryPriceLevelEntity : DOOPEntity {
 }
 mixin(EntityCalls!("TransactionCategoryPriceLevelEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(TransactionCategoryPriceLevelEntity);
 

@@ -40,8 +40,7 @@ class DSalesAttachmentEntity : DOOPEntity {
 }
 mixin(EntityCalls!("SalesAttachmentEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(SalesAttachmentEntity);
   

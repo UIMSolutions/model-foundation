@@ -24,8 +24,7 @@ class DCompetitorProductEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CompetitorProductEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(CompetitorProductEntity);
 
