@@ -8,7 +8,7 @@ class DAPLSalesLiterature : DOOPEntity {
   mixin(EntityThis!("APLSalesLiterature"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

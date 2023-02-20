@@ -8,7 +8,7 @@ class DTransactionCategoryPriceLevelEntity : DOOPEntity {
   mixin(EntityThis!("TransactionCategoryPriceLevelEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

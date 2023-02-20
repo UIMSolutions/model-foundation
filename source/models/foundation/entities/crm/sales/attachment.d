@@ -8,7 +8,7 @@ class DSalesAttachmentEntity : DOOPEntity {
   mixin(EntityThis!("SalesAttachmentEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
