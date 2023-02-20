@@ -8,7 +8,7 @@ class DInvoiceEntity : DOOPEntity {
   mixin(EntityThis!("InvoiceEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

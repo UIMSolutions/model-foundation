@@ -8,7 +8,7 @@ class DAPLJournalLine : DOOPEntity {
   mixin(EntityThis!("JournalLineEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

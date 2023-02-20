@@ -7,7 +7,7 @@ class DTransactionCategoryHierarchyElementEntity : DOOPEntity {
   mixin(EntityThis!("TransactionCategoryHierarchyElementEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values

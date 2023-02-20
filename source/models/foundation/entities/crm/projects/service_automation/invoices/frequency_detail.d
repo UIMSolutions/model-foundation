@@ -8,7 +8,7 @@ class DInvoiceFrequencyDetailEntity : DOOPEntity {
   mixin(EntityThis!("InvoiceFrequencyDetailEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

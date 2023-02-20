@@ -8,7 +8,7 @@ class DJournalEntity : DOOPEntity {
   mixin(EntityThis!("JournalEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

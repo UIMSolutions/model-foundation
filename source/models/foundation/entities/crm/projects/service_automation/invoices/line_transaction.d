@@ -7,7 +7,7 @@ class DAPLInvoiceLineTransaction : DOOPEntity {
   mixin(EntityThis!("APLInvoiceLineTransaction"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ 
