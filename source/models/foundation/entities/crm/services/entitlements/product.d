@@ -8,7 +8,7 @@ import models.foundation;
 class DEntitlementProductEntity : DOOPEntity {
   mixin(EntityThis!("EntitlementProductEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

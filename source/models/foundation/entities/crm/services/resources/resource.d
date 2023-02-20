@@ -6,7 +6,7 @@ import models.foundation;
 class DResourceEntity : DOOPEntity {
   mixin(EntityThis!("ResourceEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

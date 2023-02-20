@@ -7,7 +7,7 @@ import models.foundation;
 class DEntitlementContactEntity : DOOPEntity {
   mixin(EntityThis!("EntitlementContactEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

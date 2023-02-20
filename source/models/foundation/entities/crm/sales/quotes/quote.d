@@ -7,7 +7,7 @@ import models.foundation;
 class DQuoteEntity : DOOPEntity {
   mixin(EntityThis!("QuoteEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

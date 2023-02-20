@@ -7,7 +7,7 @@ import models.foundation;
 class DContractLineEntity : DOOPEntity {
   mixin(EntityThis!("ContractLineEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
