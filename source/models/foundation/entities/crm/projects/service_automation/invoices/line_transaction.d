@@ -91,8 +91,7 @@ class DAPLInvoiceLineTransaction : DOOPEntity {
 }
 mixin(EntityCalls!("APLInvoiceLineTransaction"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLInvoiceLineTransaction);
 

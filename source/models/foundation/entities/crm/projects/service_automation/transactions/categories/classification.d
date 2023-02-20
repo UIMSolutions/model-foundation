@@ -32,8 +32,7 @@ class DTransactionCategoryClassificationEntity : DOOPEntity {
 }
 mixin(EntityCalls!("JournalEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(TransactionCategoryClassificationEntity);
 

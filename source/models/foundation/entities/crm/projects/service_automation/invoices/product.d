@@ -102,8 +102,7 @@ class DInvoiceProductEntity : DOOPEntity {
 }
 mixin(EntityCalls!("InvoiceProductEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(InvoiceProductEntity);
 

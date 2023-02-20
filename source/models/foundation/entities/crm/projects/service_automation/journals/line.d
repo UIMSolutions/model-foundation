@@ -87,8 +87,7 @@ class DAPLJournalLine : DOOPEntity {
 }
 mixin(EntityCalls!("JournalLineEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLJournalLine);
 

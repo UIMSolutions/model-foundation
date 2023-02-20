@@ -35,8 +35,7 @@ class DInvoiceFrequencyEntity : DOOPEntity {
 }
 mixin(EntityCalls!("InvoiceFrequencyEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(InvoiceFrequencyEntity);
 
