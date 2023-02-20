@@ -8,7 +8,7 @@ import models.foundation;
 class DResourceSpecificationEntity : DOOPEntity {
   mixin(EntityThis!("ResourceSpecificationEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

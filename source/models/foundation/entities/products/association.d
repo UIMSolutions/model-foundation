@@ -7,7 +7,7 @@ import models.foundation;
 class DProductAssociationEntity : DOOPEntity {
   mixin(EntityThis!("ProductAssociationEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

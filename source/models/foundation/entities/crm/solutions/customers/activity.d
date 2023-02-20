@@ -7,7 +7,7 @@ import models.foundation;
 class DCustomerActivityEntity : DOOPEntity {
   mixin(EntityThis!("CustomerActivityEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
