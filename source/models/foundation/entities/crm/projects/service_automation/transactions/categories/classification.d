@@ -7,7 +7,7 @@ import models.foundation;
 class DTransactionCategoryClassificationEntity : DOOPEntity {
   mixin(EntityThis!("TransactionCategoryClassificationEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

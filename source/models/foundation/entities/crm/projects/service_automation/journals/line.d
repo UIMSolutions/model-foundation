@@ -7,7 +7,7 @@ import models.foundation;
 class DAPLJournalLine : DOOPEntity {
   mixin(EntityThis!("JournalLineEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

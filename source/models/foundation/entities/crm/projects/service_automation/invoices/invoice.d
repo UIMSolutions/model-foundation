@@ -7,7 +7,7 @@ import models.foundation;
 class DInvoiceEntity : DOOPEntity {
   mixin(EntityThis!("InvoiceEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

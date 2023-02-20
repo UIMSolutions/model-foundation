@@ -7,7 +7,7 @@ import models.foundation;
 class DTransactionConnectionEntity : DOOPEntity {
   mixin(EntityThis!("TransactionConnectionEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
