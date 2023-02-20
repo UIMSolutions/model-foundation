@@ -36,8 +36,7 @@ class DOpportunityRelationshipEntity : DOOPEntity {
 }
 mixin(EntityCalls!("OpportunityRelationshipEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(OpportunityRelationshipEntity);
   

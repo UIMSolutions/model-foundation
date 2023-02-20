@@ -94,8 +94,7 @@ class DQuoteCloseEntity : DOOPEntity {
 }
 mixin(EntityCalls!("QuoteCloseEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     assert(QuoteCloseEntity);
   
     auto entity = QuoteCloseEntity;

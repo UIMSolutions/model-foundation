@@ -83,8 +83,7 @@ class DAPLQuoteProduct : DOOPEntity {
 }
 mixin(EntityCalls!("APLQuoteProduct"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLQuoteProduct);
   

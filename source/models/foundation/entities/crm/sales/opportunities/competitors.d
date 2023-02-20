@@ -25,8 +25,7 @@ class DOpportunityCompetitorEntity : DOOPEntity {
 }
 mixin(EntityCalls!("OpportunityCompetitorEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(OpportunityCompetitorEntity);
 

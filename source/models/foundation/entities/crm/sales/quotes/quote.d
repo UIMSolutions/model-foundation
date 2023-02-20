@@ -112,8 +112,7 @@ class DQuoteEntity : DOOPEntity {
 }
 mixin(EntityCalls!("QuoteEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(QuoteEntity);
 

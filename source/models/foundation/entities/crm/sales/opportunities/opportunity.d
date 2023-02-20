@@ -136,8 +136,7 @@ class DOpportunityEntity : DOOPEntity {
 }
 mixin(EntityCalls!("OpportunityEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(OpportunityEntity);
   

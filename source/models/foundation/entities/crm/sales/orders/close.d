@@ -94,8 +94,7 @@ class DOrderCloseEntity : DOOPEntity {
 }
 mixin(EntityCalls!("OrderCloseEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(OrderCloseEntity);
   

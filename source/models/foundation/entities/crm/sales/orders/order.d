@@ -117,8 +117,7 @@ class DOrderEntity : DOOPEntity {
 }
 mixin(EntityCalls!("OrderEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(OrderEntity);
 
