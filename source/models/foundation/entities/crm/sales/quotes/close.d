@@ -8,7 +8,7 @@ class DQuoteCloseEntity : DOOPEntity {
   mixin(EntityThis!("QuoteCloseEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

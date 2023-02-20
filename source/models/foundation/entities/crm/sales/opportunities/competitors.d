@@ -8,7 +8,7 @@ class DOpportunityCompetitorEntity : DOOPEntity {
   mixin(EntityThis!("OpportunityCompetitorEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

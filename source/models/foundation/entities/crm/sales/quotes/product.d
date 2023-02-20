@@ -8,7 +8,7 @@ class DAPLQuoteProduct : DOOPEntity {
   mixin(EntityThis!("APLQuoteProduct"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

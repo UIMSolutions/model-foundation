@@ -8,7 +8,7 @@ class DOrderProductEntity : DOOPEntity {
   mixin(EntityThis!("OrderProductEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
