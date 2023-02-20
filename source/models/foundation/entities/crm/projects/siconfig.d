@@ -34,8 +34,7 @@ class DSiconfigEntity : DOOPEntity {
 }
 mixin(EntityCalls!("SiconfigEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(SiconfigEntity);
   

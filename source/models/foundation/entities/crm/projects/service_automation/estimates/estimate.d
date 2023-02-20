@@ -37,8 +37,7 @@ class DEstimateEntity : DOOPEntity {
 }
 mixin(EntityCalls!("EstimateEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     assert(EstimateEntity);
 
   auto entity = EstimateEntity;

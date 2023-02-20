@@ -36,8 +36,7 @@ class DRelationshipInsightsUnifiedConfigEntity : DOOPEntity {
 }
 mixin(EntityCalls!("RelationshipInsightsUnifiedConfigEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     assert(RelationshipInsightsUnifiedConfigEntity);
   
   auto entity = RelationshipInsightsUnifiedConfigEntity;

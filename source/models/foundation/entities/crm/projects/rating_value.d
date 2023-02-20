@@ -39,8 +39,7 @@ class DRatingValueEntity : DOOPEntity {
 }
 mixin(EntityCalls!("RatingValueEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     assert(RatingValueEntity);
   
   auto entity = RatingValueEntity;
