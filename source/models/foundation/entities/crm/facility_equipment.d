@@ -7,7 +7,7 @@ import models.foundation;
 class DFacilityEquipmentEntity : DOOPEntity {
   mixin(EntityThis!("FacilityEquipmentEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

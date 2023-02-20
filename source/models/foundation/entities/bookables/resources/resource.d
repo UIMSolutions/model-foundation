@@ -7,7 +7,7 @@ import models.foundation;
 class DBookableResourceEntity : DOOPEntity {
   mixin(EntityThis!("BookableResourceEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
