@@ -8,7 +8,7 @@ class DEntitlementEntity : DOOPEntity {
   mixin(EntityThis!("EntitlementEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
@@ -23,8 +23,8 @@ class DEntitlementEntity : DOOPEntity {
       "ownerId": UUIDAttribute, // Owner Id"]),
       "ownerIdType": StringAttribute, // The type of owner, either User or Team."]),
       "owningBusinessUnitId": BusinessUnitIdAttribute, // Unique identifier for the business unit that owns the record"]),
-      "owningUserId": StringAttribute, // Unique identifier of the user that owns the activity."]),
-      "owningTeamId": StringAttribute, // Unique identifier for the team that owns the record."]),
+      "owningUserId": UUIDAttribute, // Unique identifier of the user that owns the activity."]),
+      "owningTeamId": UUIDAttribute, // Unique identifier for the team that owns the record."]),
       "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
       "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
       "entitlementId": UUIDAttribute, // Unique identifier for entity instances"]),

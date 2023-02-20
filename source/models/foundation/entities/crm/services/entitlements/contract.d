@@ -8,7 +8,7 @@ class DEntitlementContactEntity : DOOPEntity {
   mixin(EntityThis!("EntitlementContactEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

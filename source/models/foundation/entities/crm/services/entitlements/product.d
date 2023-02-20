@@ -9,7 +9,7 @@ class DEntitlementProductEntity : DOOPEntity {
   mixin(EntityThis!("EntitlementProductEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([

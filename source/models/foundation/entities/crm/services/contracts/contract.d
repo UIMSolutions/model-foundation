@@ -8,7 +8,7 @@ class DAPLContractEntity : DOOPEntity {
   mixin(EntityThis!("APLContractEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([
