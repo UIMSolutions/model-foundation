@@ -8,7 +8,7 @@ class DRatingValueEntity : DOOPEntity {
   mixin(EntityThis!("RatingValueEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values

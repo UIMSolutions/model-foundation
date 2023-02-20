@@ -8,7 +8,7 @@ class DExpenseEntity : DOOPEntity {
   mixin(EntityThis!("ExpenseEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values

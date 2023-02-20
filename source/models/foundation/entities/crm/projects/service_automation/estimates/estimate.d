@@ -8,7 +8,7 @@ class DEstimateEntity : DOOPEntity {
   mixin(EntityThis!("EstimateEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // fix values
