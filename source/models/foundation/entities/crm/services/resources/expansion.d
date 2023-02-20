@@ -28,8 +28,7 @@ class DAPLResourceExpansionEntity : DOOPEntity {
 }
 mixin(EntityCalls!("APLResourceExpansionEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLResourceExpansion);
   

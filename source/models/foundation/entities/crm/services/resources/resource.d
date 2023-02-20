@@ -30,8 +30,7 @@ class DResourceEntity : DOOPEntity {
 }
 mixin(EntityCalls!("ResourceEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     assert(ResourceEntity);
   
     auto entity = ResourceEntity;

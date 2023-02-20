@@ -69,8 +69,7 @@ class DContractLineEntity : DOOPEntity {
 }
 mixin(EntityCalls!("DContractLineEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(ContractLineEntity);
   

@@ -25,8 +25,7 @@ class DEntitlementContactEntity : DOOPEntity {
 }
 mixin(EntityCalls!("EntitlementContactEntity")); 
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(EntitlementContactEntity);
   

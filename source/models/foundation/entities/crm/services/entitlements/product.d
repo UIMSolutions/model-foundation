@@ -26,8 +26,7 @@ class DEntitlementProductEntity : DOOPEntity {
 }
 mixin(EntityCalls!("EntitlementProductEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(EntitlementProductEntity);
   

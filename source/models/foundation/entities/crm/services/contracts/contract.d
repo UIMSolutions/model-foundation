@@ -74,8 +74,7 @@ class DAPLContractEntity : DOOPEntity {
 }
 mixin(EntityCalls!("APLContractEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(APLContract);
   
