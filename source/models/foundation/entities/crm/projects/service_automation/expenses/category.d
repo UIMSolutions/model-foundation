@@ -7,7 +7,7 @@ import models.foundation;
 class DExpenseCategoryEntity : DOOPEntity {
   mixin(EntityThis!("ExpenseCategoryEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

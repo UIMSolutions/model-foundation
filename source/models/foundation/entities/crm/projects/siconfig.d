@@ -6,7 +6,7 @@ import models.foundation;
 class DSiconfigEntity : DOOPEntity {
   mixin(EntityThis!("SiconfigEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

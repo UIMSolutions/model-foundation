@@ -7,7 +7,7 @@ import models.foundation;
 class DLeadEntity : DOOPEntity {
  mixin(EntityThis!("LeadEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

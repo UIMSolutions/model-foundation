@@ -7,7 +7,7 @@ import models.foundation;
 class DEstimateEntity : DOOPEntity {
   mixin(EntityThis!("EstimateEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
