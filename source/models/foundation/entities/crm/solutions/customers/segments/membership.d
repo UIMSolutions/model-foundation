@@ -38,8 +38,7 @@ class DSegmentMembershipEntity : DOOPEntity {
 }
 mixin(EntityCalls!("SegmentMembershipEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(SegmentMembershipEntity);
 

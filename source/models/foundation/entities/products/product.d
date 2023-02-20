@@ -69,8 +69,7 @@ class DProductEntity : DOOPEntity {
 mixin(EntityCalls!("ProductEntity"));
 
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(ProductEntity);
   

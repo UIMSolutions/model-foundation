@@ -39,8 +39,7 @@ class DProductAssociationEntity : DOOPEntity {
 }
 mixin(EntityCalls!("ProductAssociationEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(ProductAssociationEntity);
   

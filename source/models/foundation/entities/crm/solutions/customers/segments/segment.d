@@ -40,8 +40,7 @@ class DSegmentEntity : DOOPEntity {
 }
 mixin(EntityCalls!("SegmentEntity"));
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(SegmentEntity);
 

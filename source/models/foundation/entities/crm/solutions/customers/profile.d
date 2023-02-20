@@ -137,8 +137,7 @@ class DCustomerProfileEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CustomerProfileEntity")); 
 
-unittest {
-  version(test_model_foundation) {
+version(test_model_foundation) { unittest {
     
     assert(CustomerProfileEntity);
 
