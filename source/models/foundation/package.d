@@ -1,5 +1,7 @@
 module models.foundation;
 
-public import models.foundation.attributes;
-public import models.foundation.elements;
-public import models.foundation.entities;
+public {
+    import models.foundation.attributes;
+    import models.foundation.elements;
+    import models.foundation.entities;
+}
