@@ -1,1 +1,1 @@
-# Package 📦 models.foundation
+# Package 📦 models.foundation.usecases
