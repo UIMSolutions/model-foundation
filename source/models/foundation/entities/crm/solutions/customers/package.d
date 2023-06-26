@@ -1,8 +1,5 @@
 module models.foundation.crm.solutions.customers;
 
-@safe:
-import models.foundation;
-
 // Subpackage
 public import models.foundation.crm.solutions.customers.segments;
 
