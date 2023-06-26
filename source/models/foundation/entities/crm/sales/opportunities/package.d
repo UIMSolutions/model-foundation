@@ -1,8 +1,5 @@
 module models.foundation.crm.sales.opportunities;
 
-@safe:
-import models.foundation;
-
 public import models.foundation.crm.sales.opportunities.opportunity;
 
 public import models.foundation.crm.sales.opportunities.close;

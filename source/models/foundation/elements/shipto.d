@@ -53,7 +53,7 @@ class DShipToElement: DElement {
   mixin(StringValueProperty!("stateOrProvince"));
   mixin(StringValueProperty!("telephone"));
 
-  override DElement create() { return new DVersion; }
+  override DElement create() { return ShipToElement; }
 }
 auto ShipToElement() { return ShipToElement; }
 auto ShipToElement(string name) { return new DShipToElement(name); }

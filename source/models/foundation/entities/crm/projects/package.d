@@ -1,8 +1,5 @@
 module models.foundation.crm.projects;
 
-@safe:
-import models.foundation;
-
 public import models.foundation.crm.projects.scheduling;
 public import models.foundation.crm.projects.service_automation;
 
