@@ -1,8 +1,5 @@
 module models.foundation.crm;
 
-@safe:
-import models.foundation;
-
 public import models.foundation.crm.projects;
 public import models.foundation.crm.sales;
 public import models.foundation.crm.services;

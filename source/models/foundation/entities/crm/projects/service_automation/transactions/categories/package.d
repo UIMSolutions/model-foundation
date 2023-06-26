@@ -1,8 +1,5 @@
 module models.foundation.crm.projects.service_automation.transactions.categories;
 
-@safe:
-import models.foundation;
-
 public import models.foundation.crm.projects.service_automation.transactions.categories.category;
 
 public import models.foundation.crm.projects.service_automation.transactions.categories.classification;
