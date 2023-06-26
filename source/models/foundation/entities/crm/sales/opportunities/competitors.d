@@ -12,13 +12,13 @@ class DOpportunityCompetitorEntity : DOOPEntity {
 
     this
       .addValues([
-      "opportunityCompetitorId": UUIDAttribute, // Unique identifier of the opportunity competitor."]),
-      "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
-      "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
-      "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
-      "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
-      "competitorId": UUIDAttribute, // 
-      "opportunityId": UUIDAttribute, // 
+        "opportunityCompetitorId": UUIDAttribute, // Unique identifier of the opportunity competitor."]),
+        "importSequenceNumber": NumberAttribute, // Sequence number of the import that created this record."]),
+        "overriddenCreatedOn": TimestampAttribute, // Date and time that the record was migrated."]),
+        "timeZoneRuleVersionNumber": NumberAttribute, // For internal use only."]),
+        "utcConversionTimeZoneCode": StringAttribute, // Time zone code that was in use when the record was created."]),
+        "competitorId": UUIDAttribute, // 
+        "opportunityId": UUIDAttribute, // 
       ])
       .registerPath("foundation_crm.sales.opportunities.competitors");
   }
