@@ -4,7 +4,7 @@ module models.foundation.crm.sales.orders.order;
 import models.foundation;
 
 // Quote that has been accepted.
-class DOrderEntity : DOOPEntity {
+class DOrderEntity : DEntity {
   mixin(EntityThis!("OrderEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

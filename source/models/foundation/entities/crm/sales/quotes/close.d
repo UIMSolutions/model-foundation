@@ -4,7 +4,7 @@ module models.foundation.crm.sales.quotes.close;
 import models.foundation;
 
 // Activity generated when a quote is closed.
-class DQuoteCloseEntity : DOOPEntity {
+class DQuoteCloseEntity : DEntity {
   mixin(EntityThis!("QuoteCloseEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

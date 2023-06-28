@@ -4,7 +4,7 @@ module models.foundation.crm.sales.opportunities.product;
 import models.foundation;
 
 // Association between an opportunity and a product.
-class DOpportunityProductEntity : DOOPEntity {
+class DOpportunityProductEntity : DEntity {
   mixin(EntityThis!("OpportunityProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

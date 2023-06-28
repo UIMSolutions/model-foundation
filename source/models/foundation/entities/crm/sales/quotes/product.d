@@ -4,7 +4,7 @@ module models.foundation.crm.sales.quotes.product;
 import models.foundation;
 
 // Product line item in a quote. The details include such information as product ID, description, quantity, and cost.
-class DAPLQuoteProduct : DOOPEntity {
+class DAPLQuoteProduct : DEntity {
   mixin(EntityThis!("APLQuoteProduct"));
   
   override void initialize(DConfigurationValue configSettings = null) {

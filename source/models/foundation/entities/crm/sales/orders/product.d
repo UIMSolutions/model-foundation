@@ -4,7 +4,7 @@ module models.foundation.crm.sales.orders.product;
 import models.foundation;
 
 // Line item in a sales order.
-class DOrderProductEntity : DOOPEntity {
+class DOrderProductEntity : DEntity {
   mixin(EntityThis!("OrderProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

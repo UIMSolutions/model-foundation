@@ -4,7 +4,7 @@ module models.foundation.crm.sales.orders.close;
 import models.foundation;
 
 // Activity generated automatically when an order is closed.
-class DOrderCloseEntity : DOOPEntity {
+class DOrderCloseEntity : DEntity {
   mixin(EntityThis!("OrderCloseEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

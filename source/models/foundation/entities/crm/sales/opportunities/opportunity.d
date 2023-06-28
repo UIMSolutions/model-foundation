@@ -4,7 +4,7 @@ module models.foundation.crm.sales.opportunities.opportunity;
 import models.foundation;
 
 // Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion.
-class DOpportunityEntity : DOOPEntity {
+class DOpportunityEntity : DEntity {
   mixin(EntityThis!("OpportunityEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
