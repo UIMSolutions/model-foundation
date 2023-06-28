@@ -4,7 +4,7 @@ module models.foundation.bookables.resources.group;
 import models.foundation;
 
 // Associates resources with resource groups that they are a member of.
-class DBookableResourceGroupEntity : DOOPEntity {
+class DBookableResourceGroupEntity : DEntity {
   mixin(EntityThis!("BookableResourceGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

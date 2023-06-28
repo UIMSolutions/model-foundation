@@ -4,7 +4,7 @@ module models.foundation.crm.facility_equipment;
 import models.foundation;
 
 // Resource that can be scheduled.
-class DFacilityEquipmentEntity : DOOPEntity {
+class DFacilityEquipmentEntity : DEntity {
   mixin(EntityThis!("FacilityEquipmentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

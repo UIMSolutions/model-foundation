@@ -4,7 +4,7 @@ module models.foundation.crm.campaign;
 import models.foundation;
 
 // Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life.
-class DCampaignEntity : DOOPEntity {
+class DCampaignEntity : DEntity {
   mixin(EntityThis!("CampaignEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

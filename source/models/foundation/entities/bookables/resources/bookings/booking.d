@@ -4,7 +4,7 @@ module models.foundation.entities.bookables.resources.bookings.booking;
 import models.foundation;
 
 // Represents the line details of a resource booking.
-class DBookableResourceBookingEntity : DOOPEntity {
+class DBookableResourceBookingEntity : DEntity {
   mixin(EntityThis!("BookableResourceBookingEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

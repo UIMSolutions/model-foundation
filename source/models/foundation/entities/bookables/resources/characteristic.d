@@ -4,7 +4,7 @@ module models.foundation.bookables.resources.characteristic;
 import models.foundation;
 
 // Associates resources with their characteristics and specifies the proficiency level of a resource for that characteristic.
-class DBookableResourceCharacteristicEntity : DOOPEntity {
+class DBookableResourceCharacteristicEntity : DEntity {
   mixin(EntityThis!("BookableResourceCharacteristicEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

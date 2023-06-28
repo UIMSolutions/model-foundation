@@ -4,7 +4,7 @@ module models.foundation.entities.bookables.resources.bookings.header;
 import models.foundation;
 
 // Reservation entity representing the summary of the associated resource bookings.
-class DBookableResourceBookingHeaderEntity : DOOPEntity {
+class DBookableResourceBookingHeaderEntity : DEntity {
   mixin(EntityThis!("BookableResourceBookingHeaderEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.company;
 import models.foundation;
 
 // Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar.
-class DCompanyEntity : DOOPEntity {
+class DCompanyEntity : DEntity {
   mixin(EntityThis!("CompanyEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

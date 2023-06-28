@@ -4,7 +4,7 @@ module models.foundation.bookables.resources.categories.category;
 import models.foundation;
 
 // Categorize resources that have capacity into categories such as roles.
-class DBookableResourceCategoryEntity : DOOPEntity {
+class DBookableResourceCategoryEntity : DEntity {
   mixin(EntityThis!("BookableResourceCategoryEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

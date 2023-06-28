@@ -4,7 +4,7 @@ module models.foundation.bookables.resources.resource;
 import models.foundation;
 
 // Resource that has capacity which can be allocated to work.
-class DBookableResourceEntity : DOOPEntity {
+class DBookableResourceEntity : DEntity {
   mixin(EntityThis!("BookableResourceEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

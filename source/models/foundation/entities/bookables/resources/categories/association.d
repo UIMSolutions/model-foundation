@@ -4,7 +4,7 @@ module models.foundation.bookables.resources.categories.association;
 import models.foundation;
 
 // Association entity to model the categorization of resources.
-class DBookableResourceCategoryAssociationEntity : DOOPEntity {
+class DBookableResourceCategoryAssociationEntity : DEntity {
   mixin(EntityThis!("BookableResourceCategoryAssociationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
