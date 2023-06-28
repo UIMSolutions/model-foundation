@@ -4,7 +4,7 @@ module models.foundation.crm.projects.lead;
 import models.foundation;
 
 // Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified.
-class DLeadEntity : DOOPEntity {
+class DLeadEntity : DEntity {
  mixin(EntityThis!("LeadEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

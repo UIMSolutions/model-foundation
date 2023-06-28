@@ -4,7 +4,7 @@ module models.foundation.crm.team_membership;
 import models.foundation;
 
 // TeamMembership that is attached to one or more objects, including other notes.
- /*  class DAPLTeamMembership : DOOPEntity {
+ /*  class DAPLTeamMembership : DEntity {
   mixin(EntityThis!("xxx"));
   
   override void initialize(DConfigurationValue configSettings = null) {

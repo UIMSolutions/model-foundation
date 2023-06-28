@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.invoices.frequency_deta
 import models.foundation;
 
 // InvoiceFrequencyDetail of a user in the hierarchy
-class DInvoiceFrequencyDetailEntity : DOOPEntity {
+class DInvoiceFrequencyDetailEntity : DEntity {
   mixin(EntityThis!("InvoiceFrequencyDetailEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.estimates.estimate;
 import models.foundation;
 
 // Labor, cost, and revenue estimates for a project.
-class DEstimateEntity : DOOPEntity {
+class DEstimateEntity : DEntity {
   mixin(EntityThis!("EstimateEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

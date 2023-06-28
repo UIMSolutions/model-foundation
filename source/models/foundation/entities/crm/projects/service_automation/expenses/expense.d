@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.expenses.expense;
 import models.foundation;
 
 // Expense of a user in the hierarchy
-class DExpenseEntity : DOOPEntity {
+class DExpenseEntity : DEntity {
   mixin(EntityThis!("ExpenseEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

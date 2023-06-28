@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.expenses.category;
 import models.foundation;
 
 // Main container that holds expense category information.
-class DExpenseCategoryEntity : DOOPEntity {
+class DExpenseCategoryEntity : DEntity {
   mixin(EntityThis!("ExpenseCategoryEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

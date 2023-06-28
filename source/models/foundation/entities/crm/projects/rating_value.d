@@ -4,7 +4,7 @@ module models.foundation.crm.projects.rating_value;
 import models.foundation;
 
 // A unique value associated with a rating model that allows providing a user friendly rating value..
-class DRatingValueEntity : DOOPEntity {
+class DRatingValueEntity : DEntity {
   mixin(EntityThis!("RatingValueEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

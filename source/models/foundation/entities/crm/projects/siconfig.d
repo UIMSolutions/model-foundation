@@ -3,7 +3,7 @@ module models.foundation.crm.projects.siconfig;
 @safe:
 import models.foundation;
 
-class DSiconfigEntity : DOOPEntity {
+class DSiconfigEntity : DEntity {
   mixin(EntityThis!("SiconfigEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

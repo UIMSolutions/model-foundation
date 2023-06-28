@@ -4,7 +4,7 @@ module models.foundation.crm.projects.relationship_insights_unified_config;
 import models.foundation;
 
 // 
-class DRelationshipInsightsUnifiedConfigEntity : DOOPEntity {
+class DRelationshipInsightsUnifiedConfigEntity : DEntity {
   mixin(EntityThis!("RelationshipInsightsUnifiedConfigEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.estimates.line;
 import models.foundation;
 
 // Estimates on a per day timescale.
-class DEstimateLineEntity : DOOPEntity {
+class DEstimateLineEntity : DEntity {
   mixin(EntityThis!("EstimateLineEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
