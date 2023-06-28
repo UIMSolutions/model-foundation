@@ -4,7 +4,7 @@ module models.foundation.crm.solutions.customers.activity;
 import models.foundation;
 
 // An activity performed by a user that has observational value to the business.
-class DCustomerActivityEntity : DOOPEntity {
+class DCustomerActivityEntity : DEntity {
   mixin(EntityThis!("CustomerActivityEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

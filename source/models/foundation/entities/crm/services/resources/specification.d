@@ -5,7 +5,7 @@ module models.foundation.crm.services.resources.specification;
 import models.foundation;
 
 // Selection rule that allows the scheduling engine to select a number of resources from a pool of resources. The rules can be associated with a service.
-class DResourceSpecificationEntity : DOOPEntity {
+class DResourceSpecificationEntity : DEntity {
   mixin(EntityThis!("ResourceSpecificationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

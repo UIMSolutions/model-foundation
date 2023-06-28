@@ -5,7 +5,7 @@ module models.foundation.crm.services.entitlements.product;
 import models.foundation;
 
 // The root entity for portal Ideas.
-class DEntitlementProductEntity : DOOPEntity {
+class DEntitlementProductEntity : DEntity {
   mixin(EntityThis!("EntitlementProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

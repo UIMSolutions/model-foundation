@@ -4,7 +4,7 @@ module models.foundation.products.relationship;
 import models.foundation;
 
 // Information about the selling relationship between two products, including the relationship type, such as up-sell, cross-sell, substitute, or accessory.
-class DProductRelationshipEntity : DOOPEntity {
+class DProductRelationshipEntity : DEntity {
   mixin(EntityThis!("ProductRelationshipEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

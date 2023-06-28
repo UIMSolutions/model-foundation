@@ -4,7 +4,7 @@ module models.foundation.crm.solutions.customers.segments.segment;
 import models.foundation;
 
 // Defines a group of members that exhibit common traits.
-class DSegmentEntity : DOOPEntity {
+class DSegmentEntity : DEntity {
   mixin(EntityThis!("SegmentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

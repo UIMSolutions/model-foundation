@@ -4,7 +4,7 @@ module models.foundation.crm.services.entitlements.contract;
 import models.foundation;
 
 // 
-class DEntitlementContactEntity : DOOPEntity {
+class DEntitlementContactEntity : DEntity {
   mixin(EntityThis!("EntitlementContactEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

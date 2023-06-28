@@ -4,7 +4,7 @@ module models.foundation.products.association;
 import models.foundation;
 
 // Instance of a product added to a bundle or kit.
-class DProductAssociationEntity : DOOPEntity {
+class DProductAssociationEntity : DEntity {
   mixin(EntityThis!("ProductAssociationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

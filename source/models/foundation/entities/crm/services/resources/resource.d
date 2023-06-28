@@ -3,7 +3,7 @@ module models.foundation.crm.services.resources.resource;
 @safe:
 import models.foundation;
 
-class DResourceEntity : DOOPEntity {
+class DResourceEntity : DEntity {
   mixin(EntityThis!("ResourceEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

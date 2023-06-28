@@ -4,7 +4,7 @@ module models.foundation.products.product;
 import models.foundation;
 
 // Information about products and their pricing information.
-class DProductEntity : DOOPEntity {
+class DProductEntity : DEntity {
   mixin(EntityThis!("ProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

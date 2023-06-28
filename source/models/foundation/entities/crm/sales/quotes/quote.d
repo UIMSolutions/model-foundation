@@ -4,7 +4,7 @@ module models.foundation.crm.sales.quotes.quote;
 import models.foundation;
 
 // Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer.
-class DQuoteEntity : DOOPEntity {
+class DQuoteEntity : DEntity {
   mixin(EntityThis!("QuoteEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

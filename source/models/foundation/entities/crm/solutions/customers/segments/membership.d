@@ -4,7 +4,7 @@ module models.foundation.crm.solutions.customers.segments.membership;
 import models.foundation;
 
 // Members participating in a given segment.
-class DSegmentMembershipEntity : DOOPEntity {
+class DSegmentMembershipEntity : DEntity {
   mixin(EntityThis!("SegmentMembershipEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

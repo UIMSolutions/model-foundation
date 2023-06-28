@@ -4,7 +4,7 @@ module models.foundation.crm.services.contracts.line;
 import models.foundation;
 
 // Line item in a contract that specifies the type of service a customer is entitled to.
-class DContractLineEntity : DOOPEntity {
+class DContractLineEntity : DEntity {
   mixin(EntityThis!("ContractLineEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

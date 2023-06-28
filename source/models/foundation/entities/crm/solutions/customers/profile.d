@@ -4,7 +4,7 @@ module models.foundation.crm.solutions.customers.profile;
 import models.foundation;
 
 // A person or organization that either performed or has the potential to engage in a business activity.
-class DCustomerProfileEntity : DOOPEntity {
+class DCustomerProfileEntity : DEntity {
   mixin(EntityThis!("CustomerProfileEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

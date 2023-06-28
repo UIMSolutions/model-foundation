@@ -4,7 +4,7 @@ module models.foundation.crm.services.contracts.contract;
 import models.foundation;
 
 // Agreement to provide customer service during a specified amount of time or number of cases.
-class DAPLContractEntity : DOOPEntity {
+class DAPLContractEntity : DEntity {
   mixin(EntityThis!("APLContractEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.services.resources.expansion;
 import models.foundation;
 
 // 
-class DAPLResourceExpansionEntity : DOOPEntity {
+class DAPLResourceExpansionEntity : DEntity {
   mixin(EntityThis!("APLResourceExpansionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
