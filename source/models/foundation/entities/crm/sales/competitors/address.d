@@ -5,7 +5,7 @@ import uim.oop;
 import uim.entities;
 
 // Additional addresses for a competitor. The first two addresses are stored in the competitor object.
-class DCompetitorAddressEntity : DOOPEntity {
+class DCompetitorAddressEntity : DEntity {
   mixin(EntityThis!("CompetitorAddressEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.transactions.categories
 import models.foundation;
 
 // Entity used to associate a category broadly as time, expense or material.
-class DTransactionCategoryClassificationEntity : DOOPEntity {
+class DTransactionCategoryClassificationEntity : DEntity {
   mixin(EntityThis!("TransactionCategoryClassificationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

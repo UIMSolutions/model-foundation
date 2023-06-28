@@ -4,7 +4,7 @@ module models.foundation.crm.sales.competitors.competitor;
 import models.foundation;
 
 // Business competing for the sale represented by a lead or opportunity.
-class DCompetitorEntity : DOOPEntity {
+class DCompetitorEntity : DEntity {
   mixin(EntityThis!("CompetitorEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

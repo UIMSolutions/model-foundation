@@ -4,7 +4,7 @@ module models.foundation.crm.sales.attachment;
 import models.foundation;
 
 // Item in the sales literature collection.
-class DSalesAttachmentEntity : DOOPEntity {
+class DSalesAttachmentEntity : DEntity {
   mixin(EntityThis!("SalesAttachmentEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

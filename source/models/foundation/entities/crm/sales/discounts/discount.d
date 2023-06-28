@@ -4,7 +4,7 @@ module models.foundation.crm.sales.discounts.discount;
 import models.foundation;
 
 // Price reduction made from the list price of a product or service based on the quantity purchased.
-class DDiscountEntity : DOOPEntity {
+class DDiscountEntity : DEntity {
   mixin(EntityThis!("DiscountEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

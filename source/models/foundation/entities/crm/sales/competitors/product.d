@@ -4,7 +4,7 @@ module models.foundation.crm.sales.competitors.product;
 import models.foundation;
 
 // Association between a competitor and a product offered by the competitor.
-class DCompetitorProductEntity : DOOPEntity {
+class DCompetitorProductEntity : DEntity {
   mixin(EntityThis!("CompetitorProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

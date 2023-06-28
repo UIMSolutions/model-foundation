@@ -4,7 +4,7 @@ module models.foundation.crm.sales.literature;
 import models.foundation;
 
 // Storage of sales literature, which may contain one or more documents.
-class DAPLSalesLiterature : DOOPEntity {
+class DAPLSalesLiterature : DEntity {
   mixin(EntityThis!("APLSalesLiterature"));
   
   override void initialize(DConfigurationValue configSettings = null) {

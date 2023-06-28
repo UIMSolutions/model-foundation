@@ -4,7 +4,7 @@ module models.foundation.crm.sales.discounts.list;
 import models.foundation;
 
 // Type of discount specified as either a percentage or an amount.
-class DDiscountListEntity : DOOPEntity {
+class DDiscountListEntity : DEntity {
   mixin(EntityThis!("DiscountListEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.transactions.categories
 import models.foundation;
 
 // List of prices by category on a price list.
-class DTransactionCategoryPriceLevelEntity : DOOPEntity {
+class DTransactionCategoryPriceLevelEntity : DEntity {
   mixin(EntityThis!("TransactionCategoryPriceLevelEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
