@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.expenses.receipt;
 import models.foundation;
 
 // Table that contains expense receipt information.
-class DExpenseReceiptEntity : DOOPEntity {
+class DExpenseReceiptEntity : DEntity {
   mixin(EntityThis!("ExpenseReceiptEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

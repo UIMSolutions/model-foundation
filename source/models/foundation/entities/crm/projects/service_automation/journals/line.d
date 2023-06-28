@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.journals.line;
 import models.foundation;
 
 // nposted business transaction line details.
-class DAPLJournalLine : DOOPEntity {
+class DAPLJournalLine : DEntity {
   mixin(EntityThis!("JournalLineEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

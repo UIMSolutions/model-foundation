@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.invoices.product;
 import models.foundation;
 
 // Line item in an invoice containing detailed billing information for a product.
-class DInvoiceProductEntity : DOOPEntity {
+class DInvoiceProductEntity : DEntity {
   mixin(EntityThis!("InvoiceProductEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

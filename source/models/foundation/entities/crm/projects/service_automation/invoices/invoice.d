@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.invoices.invoice;
 import models.foundation;
 
 // Order that has been billed.
-class DInvoiceEntity : DOOPEntity {
+class DInvoiceEntity : DEntity {
   mixin(EntityThis!("InvoiceEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

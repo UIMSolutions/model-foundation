@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.invoices.frequency;
 import models.foundation;
 
 // InvoiceFrequency of a user in the hierarchy
-class DInvoiceFrequencyEntity : DOOPEntity {
+class DInvoiceFrequencyEntity : DEntity {
   mixin(EntityThis!("xxx"));
   
   override void initialize(DConfigurationValue configSettings = null) {

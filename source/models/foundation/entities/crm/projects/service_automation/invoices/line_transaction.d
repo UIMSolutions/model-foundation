@@ -3,7 +3,7 @@ module models.foundation.crm.projects.service_automation.invoices.line_transacti
 import models.foundation;
 
 // Transactions that are associated to an invoice line.
-class DAPLInvoiceLineTransaction : DOOPEntity {
+class DAPLInvoiceLineTransaction : DEntity {
   mixin(EntityThis!("APLInvoiceLineTransaction"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.transactions.categories
 import models.foundation;
 
 // Business transaction categories to classify costs and revenue.
-class DTransactionCategoryEntity : DOOPEntity {
+class DTransactionCategoryEntity : DEntity {
   mixin(EntityThis!("TransactionConnectionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

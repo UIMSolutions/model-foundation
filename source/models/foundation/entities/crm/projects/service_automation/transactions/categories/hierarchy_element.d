@@ -3,7 +3,7 @@ module models.foundation.crm.projects.service_automation.transactions.categories
 import models.foundation;
 
 // Hierarchical relationship of the transaction category with a root node.
-class DTransactionCategoryHierarchyElementEntity : DOOPEntity {
+class DTransactionCategoryHierarchyElementEntity : DEntity {
   mixin(EntityThis!("TransactionCategoryHierarchyElementEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

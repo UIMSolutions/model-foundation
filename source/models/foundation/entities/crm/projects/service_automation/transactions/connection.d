@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.transactions.connection
 import models.foundation;
 
 // TransactionConnection of a user in the hierarchy
-class DTransactionConnectionEntity : DOOPEntity {
+class DTransactionConnectionEntity : DEntity {
   mixin(EntityThis!("TransactionConnectionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

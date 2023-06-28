@@ -4,7 +4,7 @@ module models.foundation.crm.projects.service_automation.journals.journal;
 import models.foundation;
 
 // Unposted business transactions, for example, time and expense.
-class DJournalEntity : DOOPEntity {
+class DJournalEntity : DEntity {
   mixin(EntityThis!("JournalEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
